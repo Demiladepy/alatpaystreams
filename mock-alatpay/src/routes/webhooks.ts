@@ -5,7 +5,7 @@ const NETWORK_DELAY_MS = 400;
 const WEBHOOK_DELAY_MS = 200;
 
 function getWebhookSecret(): string {
-  return process.env.ALATPAY_WEBHOOK_SECRET ?? 'dev-webhook-secret-change-me';
+  return process.env.ALATPAY_WEBHOOK_SECRET ?? '';
 }
 
 function getWebhookUrl(): string | null {

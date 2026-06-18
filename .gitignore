@@ -1,5 +1,20 @@
 node_modules/
 dist/
 .env
+.env.*
+!.env.example
 *.log
 coverage/
+
+# Secrets & credentials
+*.pem
+*.key
+*.p12
+credentials.json
+secrets.json
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
