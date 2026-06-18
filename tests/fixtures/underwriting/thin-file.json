@@ -1,0 +1,651 @@
+{
+  "name": "thin-file",
+  "description": "45 days tenure, ~₦600k/month — conservative offer",
+  "referenceDate": "2025-06-18T12:00:00.000Z",
+  "context": {
+    "hasActiveLoan": false,
+    "accountFrozen": false,
+    "recentOfferWithin7Days": false
+  },
+  "transactions": [
+    {
+      "amountNaira": 6500,
+      "daysAgo": 45,
+      "raw": {
+        "customerName": "Cust 3"
+      }
+    },
+    {
+      "amountNaira": 6500,
+      "daysAgo": 45,
+      "raw": {
+        "customerName": "Cust 4"
+      }
+    },
+    {
+      "amountNaira": 6500,
+      "daysAgo": 44,
+      "raw": {
+        "customerName": "Cust 2"
+      }
+    },
+    {
+      "amountNaira": 6500,
+      "daysAgo": 44,
+      "raw": {
+        "customerName": "Cust 3"
+      }
+    },
+    {
+      "amountNaira": 6500,
+      "daysAgo": 43,
+      "raw": {
+        "customerName": "Cust 1"
+      }
+    },
+    {
+      "amountNaira": 6500,
+      "daysAgo": 43,
+      "raw": {
+        "customerName": "Cust 2"
+      }
+    },
+    {
+      "amountNaira": 6500,
+      "daysAgo": 42,
+      "raw": {
+        "customerName": "Cust 0"
+      }
+    },
+    {
+      "amountNaira": 6500,
+      "daysAgo": 42,
+      "raw": {
+        "customerName": "Cust 1"
+      }
+    },
+    {
+      "amountNaira": 6500,
+      "daysAgo": 41,
+      "raw": {
+        "customerName": "Cust 5"
+      }
+    },
+    {
+      "amountNaira": 6500,
+      "daysAgo": 41,
+      "raw": {
+        "customerName": "Cust 0"
+      }
+    },
+    {
+      "amountNaira": 6500,
+      "daysAgo": 40,
+      "raw": {
+        "customerName": "Cust 4"
+      }
+    },
+    {
+      "amountNaira": 6500,
+      "daysAgo": 40,
+      "raw": {
+        "customerName": "Cust 5"
+      }
+    },
+    {
+      "amountNaira": 6500,
+      "daysAgo": 39,
+      "raw": {
+        "customerName": "Cust 3"
+      }
+    },
+    {
+      "amountNaira": 6500,
+      "daysAgo": 39,
+      "raw": {
+        "customerName": "Cust 4"
+      }
+    },
+    {
+      "amountNaira": 6500,
+      "daysAgo": 38,
+      "raw": {
+        "customerName": "Cust 2"
+      }
+    },
+    {
+      "amountNaira": 6500,
+      "daysAgo": 38,
+      "raw": {
+        "customerName": "Cust 3"
+      }
+    },
+    {
+      "amountNaira": 6500,
+      "daysAgo": 37,
+      "raw": {
+        "customerName": "Cust 1"
+      }
+    },
+    {
+      "amountNaira": 6500,
+      "daysAgo": 37,
+      "raw": {
+        "customerName": "Cust 2"
+      }
+    },
+    {
+      "amountNaira": 6500,
+      "daysAgo": 36,
+      "raw": {
+        "customerName": "Cust 0"
+      }
+    },
+    {
+      "amountNaira": 6500,
+      "daysAgo": 36,
+      "raw": {
+        "customerName": "Cust 1"
+      }
+    },
+    {
+      "amountNaira": 6500,
+      "daysAgo": 35,
+      "raw": {
+        "customerName": "Cust 5"
+      }
+    },
+    {
+      "amountNaira": 6500,
+      "daysAgo": 35,
+      "raw": {
+        "customerName": "Cust 0"
+      }
+    },
+    {
+      "amountNaira": 6500,
+      "daysAgo": 34,
+      "raw": {
+        "customerName": "Cust 4"
+      }
+    },
+    {
+      "amountNaira": 6500,
+      "daysAgo": 34,
+      "raw": {
+        "customerName": "Cust 5"
+      }
+    },
+    {
+      "amountNaira": 6500,
+      "daysAgo": 33,
+      "raw": {
+        "customerName": "Cust 3"
+      }
+    },
+    {
+      "amountNaira": 6500,
+      "daysAgo": 33,
+      "raw": {
+        "customerName": "Cust 4"
+      }
+    },
+    {
+      "amountNaira": 6500,
+      "daysAgo": 32,
+      "raw": {
+        "customerName": "Cust 2"
+      }
+    },
+    {
+      "amountNaira": 6500,
+      "daysAgo": 32,
+      "raw": {
+        "customerName": "Cust 3"
+      }
+    },
+    {
+      "amountNaira": 6500,
+      "daysAgo": 31,
+      "raw": {
+        "customerName": "Cust 1"
+      }
+    },
+    {
+      "amountNaira": 6500,
+      "daysAgo": 31,
+      "raw": {
+        "customerName": "Cust 2"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 30,
+      "raw": {
+        "customerName": "Cust 0"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 30,
+      "raw": {
+        "customerName": "Cust 1"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 29,
+      "raw": {
+        "customerName": "Cust 5"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 29,
+      "raw": {
+        "customerName": "Cust 0"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 28,
+      "raw": {
+        "customerName": "Cust 4"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 28,
+      "raw": {
+        "customerName": "Cust 5"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 27,
+      "raw": {
+        "customerName": "Cust 3"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 27,
+      "raw": {
+        "customerName": "Cust 4"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 26,
+      "raw": {
+        "customerName": "Cust 2"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 26,
+      "raw": {
+        "customerName": "Cust 3"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 25,
+      "raw": {
+        "customerName": "Cust 1"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 25,
+      "raw": {
+        "customerName": "Cust 2"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 24,
+      "raw": {
+        "customerName": "Cust 0"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 24,
+      "raw": {
+        "customerName": "Cust 1"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 23,
+      "raw": {
+        "customerName": "Cust 5"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 23,
+      "raw": {
+        "customerName": "Cust 0"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 22,
+      "raw": {
+        "customerName": "Cust 4"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 22,
+      "raw": {
+        "customerName": "Cust 5"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 21,
+      "raw": {
+        "customerName": "Cust 3"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 21,
+      "raw": {
+        "customerName": "Cust 4"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 20,
+      "raw": {
+        "customerName": "Cust 2"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 20,
+      "raw": {
+        "customerName": "Cust 3"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 19,
+      "raw": {
+        "customerName": "Cust 1"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 19,
+      "raw": {
+        "customerName": "Cust 2"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 18,
+      "raw": {
+        "customerName": "Cust 0"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 18,
+      "raw": {
+        "customerName": "Cust 1"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 17,
+      "raw": {
+        "customerName": "Cust 5"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 17,
+      "raw": {
+        "customerName": "Cust 0"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 16,
+      "raw": {
+        "customerName": "Cust 4"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 16,
+      "raw": {
+        "customerName": "Cust 5"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 15,
+      "raw": {
+        "customerName": "Cust 3"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 15,
+      "raw": {
+        "customerName": "Cust 4"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 14,
+      "raw": {
+        "customerName": "Cust 2"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 14,
+      "raw": {
+        "customerName": "Cust 3"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 13,
+      "raw": {
+        "customerName": "Cust 1"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 13,
+      "raw": {
+        "customerName": "Cust 2"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 12,
+      "raw": {
+        "customerName": "Cust 0"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 12,
+      "raw": {
+        "customerName": "Cust 1"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 11,
+      "raw": {
+        "customerName": "Cust 5"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 11,
+      "raw": {
+        "customerName": "Cust 0"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 10,
+      "raw": {
+        "customerName": "Cust 4"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 10,
+      "raw": {
+        "customerName": "Cust 5"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 9,
+      "raw": {
+        "customerName": "Cust 3"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 9,
+      "raw": {
+        "customerName": "Cust 4"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 8,
+      "raw": {
+        "customerName": "Cust 2"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 8,
+      "raw": {
+        "customerName": "Cust 3"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 7,
+      "raw": {
+        "customerName": "Cust 1"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 7,
+      "raw": {
+        "customerName": "Cust 2"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 6,
+      "raw": {
+        "customerName": "Cust 0"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 6,
+      "raw": {
+        "customerName": "Cust 1"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 5,
+      "raw": {
+        "customerName": "Cust 5"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 5,
+      "raw": {
+        "customerName": "Cust 0"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 4,
+      "raw": {
+        "customerName": "Cust 4"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 4,
+      "raw": {
+        "customerName": "Cust 5"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 3,
+      "raw": {
+        "customerName": "Cust 3"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 3,
+      "raw": {
+        "customerName": "Cust 4"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 2,
+      "raw": {
+        "customerName": "Cust 2"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 2,
+      "raw": {
+        "customerName": "Cust 3"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 1,
+      "raw": {
+        "customerName": "Cust 1"
+      }
+    },
+    {
+      "amountNaira": 6000,
+      "daysAgo": 1,
+      "raw": {
+        "customerName": "Cust 2"
+      }
+    }
+  ],
+  "expected": {
+    "eligible": true,
+    "tier": "conservative",
+    "scoreMin": 0.45,
+    "scoreMax": 0.62,
+    "last30VolumeMin": 330000,
+    "last30VolumeMax": 400000,
+    "suggestedOfferMin": 50000
+  }
+}

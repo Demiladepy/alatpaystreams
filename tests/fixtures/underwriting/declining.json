@@ -1,0 +1,1886 @@
+{
+  "name": "declining",
+  "description": "Last 30 vs prior 30 volume ratio ~0.6 — ineligible",
+  "referenceDate": "2025-06-18T12:00:00.000Z",
+  "context": {
+    "hasActiveLoan": false,
+    "accountFrozen": false,
+    "recentOfferWithin7Days": false
+  },
+  "transactions": [
+    {
+      "amountNaira": 6667,
+      "daysAgo": 89,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 89,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 89,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 88,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 88,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 88,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 87,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 87,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 87,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 86,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 86,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 86,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 85,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 85,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 85,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 84,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 84,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 84,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 83,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 83,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 83,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 82,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 82,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 82,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 81,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 81,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 81,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 80,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 80,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 80,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 79,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 79,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 79,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 78,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 78,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 78,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 77,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 77,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 77,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 76,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 76,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 76,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 75,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 75,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 75,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 74,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 74,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 74,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 73,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 73,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 73,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 72,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 72,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 72,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 71,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 71,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 71,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 70,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 70,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 70,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 69,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 69,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 69,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 68,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 68,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 68,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 67,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 67,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 67,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 66,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 66,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 66,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 65,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 65,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 65,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 64,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 64,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 64,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 63,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 63,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 63,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 62,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 62,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 62,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 61,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 61,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 61,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 60,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 60,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 60,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 59,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 59,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 59,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 58,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 58,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 58,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 57,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 57,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 57,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 56,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 56,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 56,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 55,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 55,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 55,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 54,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 54,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 54,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 53,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 53,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 53,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 52,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 52,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 52,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 51,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 51,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 51,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 50,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 50,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 50,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 49,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 49,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 49,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 48,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 48,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 48,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 47,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 47,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 47,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 46,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 46,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 46,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 45,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 45,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 45,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 44,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 44,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 44,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 43,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 43,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 43,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 42,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 42,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 42,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 41,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 41,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 41,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 40,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 40,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 40,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 39,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 39,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 39,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 38,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 38,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 38,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 37,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 37,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 37,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 36,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 36,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 36,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 35,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 35,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 35,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 34,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 34,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 34,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 33,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 33,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 33,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 32,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 32,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 32,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 31,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 31,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 11000,
+      "daysAgo": 31,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 30,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 30,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 30,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 29,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 29,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 29,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 28,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 28,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 28,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 27,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 27,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 27,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 26,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 26,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 26,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 25,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 25,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 25,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 24,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 24,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 24,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 23,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 23,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 23,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 22,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 22,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 22,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 21,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 21,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 21,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 20,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 20,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 20,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 19,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 19,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 19,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 18,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 18,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 18,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 17,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 17,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 17,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 16,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 16,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 16,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 15,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 15,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 15,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 14,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 14,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 14,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 13,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 13,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 13,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 12,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 12,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 12,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 11,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 11,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 11,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 10,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 10,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 10,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 9,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 9,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 9,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 8,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 8,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 8,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 7,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 7,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 7,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 6,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 6,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 6,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 5,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 5,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 5,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 4,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 4,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 4,
+      "raw": {
+        "customerName": "Shop 0"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 3,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 3,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 3,
+      "raw": {
+        "customerName": "Shop 5"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 2,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 2,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 2,
+      "raw": {
+        "customerName": "Shop 4"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 1,
+      "raw": {
+        "customerName": "Shop 1"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 1,
+      "raw": {
+        "customerName": "Shop 2"
+      }
+    },
+    {
+      "amountNaira": 6667,
+      "daysAgo": 1,
+      "raw": {
+        "customerName": "Shop 3"
+      }
+    }
+  ],
+  "expected": {
+    "eligible": false,
+    "tier": null,
+    "growthRatioMax": 0.65
+  }
+}

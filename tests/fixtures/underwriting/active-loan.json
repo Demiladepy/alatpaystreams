@@ -1,0 +1,3559 @@
+{
+  "name": "active-loan",
+  "description": "Healthy file but merchant already has an active loan",
+  "referenceDate": "2025-06-18T12:00:00.000Z",
+  "context": {
+    "hasActiveLoan": true,
+    "accountFrozen": false,
+    "recentOfferWithin7Days": false
+  },
+  "transactions": [
+    {
+      "amountNaira": 6250,
+      "daysAgo": 119,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 119,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 119,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 119,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 118,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 118,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 118,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 118,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 117,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 117,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 117,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 117,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 116,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 116,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 116,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 116,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 115,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 115,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 115,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 115,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 114,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 114,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 114,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 114,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 113,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 113,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 113,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 113,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 112,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 112,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 112,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 112,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 111,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 111,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 111,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 111,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 110,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 110,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 110,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 110,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 109,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 109,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 109,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 109,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 108,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 108,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 108,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 108,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 107,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 107,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 107,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 107,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 106,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 106,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 106,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 106,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 105,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 105,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 105,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 105,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 104,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 104,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 104,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 104,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 103,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 103,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 103,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 103,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 102,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 102,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 102,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 102,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 101,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 101,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 101,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 101,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 100,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 100,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 100,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 100,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 99,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 99,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 99,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 99,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 98,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 98,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 98,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 98,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 97,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 97,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 97,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 97,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 96,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 96,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 96,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 96,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 95,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 95,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 95,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 95,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 94,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 94,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 94,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 94,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 93,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 93,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 93,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 93,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 92,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 92,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 92,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 92,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 91,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 91,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 91,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 91,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 90,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 90,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 90,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 90,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 89,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 89,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 89,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 89,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 88,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 88,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 88,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 88,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 87,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 87,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 87,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 87,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 86,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 86,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 86,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 86,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 85,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 85,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 85,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 85,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 84,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 84,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 84,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 84,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 83,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 83,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 83,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 83,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 82,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 82,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 82,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 82,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 81,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 81,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 81,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 81,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 80,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 80,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 80,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 80,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 79,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 79,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 79,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 79,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 78,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 78,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 78,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 78,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 77,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 77,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 77,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 77,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 76,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 76,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 76,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 76,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 75,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 75,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 75,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 75,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 74,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 74,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 74,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 74,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 73,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 73,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 73,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 73,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 72,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 72,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 72,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 72,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 71,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 71,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 71,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 71,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 70,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 70,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 70,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 70,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 69,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 69,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 69,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 69,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 68,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 68,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 68,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 68,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 67,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 67,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 67,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 67,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 66,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 66,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 66,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 66,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 65,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 65,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 65,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 65,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 64,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 64,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 64,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 64,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 63,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 63,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 63,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 63,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 62,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 62,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 62,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 62,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 61,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 61,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 61,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 6250,
+      "daysAgo": 61,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 30,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 30,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 30,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 30,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 30,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 29,
+      "raw": {
+        "customerName": "Buyer 14"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 29,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 29,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 29,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 29,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 28,
+      "raw": {
+        "customerName": "Buyer 13"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 28,
+      "raw": {
+        "customerName": "Buyer 14"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 28,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 28,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 28,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 27,
+      "raw": {
+        "customerName": "Buyer 12"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 27,
+      "raw": {
+        "customerName": "Buyer 13"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 27,
+      "raw": {
+        "customerName": "Buyer 14"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 27,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 27,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 26,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 26,
+      "raw": {
+        "customerName": "Buyer 12"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 26,
+      "raw": {
+        "customerName": "Buyer 13"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 26,
+      "raw": {
+        "customerName": "Buyer 14"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 26,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 25,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 25,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 25,
+      "raw": {
+        "customerName": "Buyer 12"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 25,
+      "raw": {
+        "customerName": "Buyer 13"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 25,
+      "raw": {
+        "customerName": "Buyer 14"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 24,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 24,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 24,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 24,
+      "raw": {
+        "customerName": "Buyer 12"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 24,
+      "raw": {
+        "customerName": "Buyer 13"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 23,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 23,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 23,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 23,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 23,
+      "raw": {
+        "customerName": "Buyer 12"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 22,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 22,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 22,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 22,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 22,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 21,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 21,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 21,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 21,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 21,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 20,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 20,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 20,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 20,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 20,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 19,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 19,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 19,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 19,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 19,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 18,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 18,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 18,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 18,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 18,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 17,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 17,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 17,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 17,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 17,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 16,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 16,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 16,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 16,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 16,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 15,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 15,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 15,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 15,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 15,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 14,
+      "raw": {
+        "customerName": "Buyer 14"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 14,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 14,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 14,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 14,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 13,
+      "raw": {
+        "customerName": "Buyer 13"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 13,
+      "raw": {
+        "customerName": "Buyer 14"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 13,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 13,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 13,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 12,
+      "raw": {
+        "customerName": "Buyer 12"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 12,
+      "raw": {
+        "customerName": "Buyer 13"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 12,
+      "raw": {
+        "customerName": "Buyer 14"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 12,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 12,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 11,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 11,
+      "raw": {
+        "customerName": "Buyer 12"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 11,
+      "raw": {
+        "customerName": "Buyer 13"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 11,
+      "raw": {
+        "customerName": "Buyer 14"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 11,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 10,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 10,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 10,
+      "raw": {
+        "customerName": "Buyer 12"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 10,
+      "raw": {
+        "customerName": "Buyer 13"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 10,
+      "raw": {
+        "customerName": "Buyer 14"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 9,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 9,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 9,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 9,
+      "raw": {
+        "customerName": "Buyer 12"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 9,
+      "raw": {
+        "customerName": "Buyer 13"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 8,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 8,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 8,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 8,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 8,
+      "raw": {
+        "customerName": "Buyer 12"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 7,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 7,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 7,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 7,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 7,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 6,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 6,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 6,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 6,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 6,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 5,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 5,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 5,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 5,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 5,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 4,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 4,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 4,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 4,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 4,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 3,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 3,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 3,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 3,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 3,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 2,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 2,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 2,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 2,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 2,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 1,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 1,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 1,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 1,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 14000,
+      "daysAgo": 1,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 60,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 60,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 60,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 60,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 59,
+      "raw": {
+        "customerName": "Buyer 14"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 59,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 59,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 59,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 58,
+      "raw": {
+        "customerName": "Buyer 13"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 58,
+      "raw": {
+        "customerName": "Buyer 14"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 58,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 58,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 57,
+      "raw": {
+        "customerName": "Buyer 12"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 57,
+      "raw": {
+        "customerName": "Buyer 13"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 57,
+      "raw": {
+        "customerName": "Buyer 14"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 57,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 56,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 56,
+      "raw": {
+        "customerName": "Buyer 12"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 56,
+      "raw": {
+        "customerName": "Buyer 13"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 56,
+      "raw": {
+        "customerName": "Buyer 14"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 55,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 55,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 55,
+      "raw": {
+        "customerName": "Buyer 12"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 55,
+      "raw": {
+        "customerName": "Buyer 13"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 54,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 54,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 54,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 54,
+      "raw": {
+        "customerName": "Buyer 12"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 53,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 53,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 53,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 53,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 52,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 52,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 52,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 52,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 51,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 51,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 51,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 51,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 50,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 50,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 50,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 50,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 49,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 49,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 49,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 49,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 48,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 48,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 48,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 48,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 47,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 47,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 47,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 47,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 46,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 46,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 46,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 46,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 45,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 45,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 45,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 45,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 44,
+      "raw": {
+        "customerName": "Buyer 14"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 44,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 44,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 44,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 43,
+      "raw": {
+        "customerName": "Buyer 13"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 43,
+      "raw": {
+        "customerName": "Buyer 14"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 43,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 43,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 42,
+      "raw": {
+        "customerName": "Buyer 12"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 42,
+      "raw": {
+        "customerName": "Buyer 13"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 42,
+      "raw": {
+        "customerName": "Buyer 14"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 42,
+      "raw": {
+        "customerName": "Buyer 0"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 41,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 41,
+      "raw": {
+        "customerName": "Buyer 12"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 41,
+      "raw": {
+        "customerName": "Buyer 13"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 41,
+      "raw": {
+        "customerName": "Buyer 14"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 40,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 40,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 40,
+      "raw": {
+        "customerName": "Buyer 12"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 40,
+      "raw": {
+        "customerName": "Buyer 13"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 39,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 39,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 39,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 39,
+      "raw": {
+        "customerName": "Buyer 12"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 38,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 38,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 38,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 38,
+      "raw": {
+        "customerName": "Buyer 11"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 37,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 37,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 37,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 37,
+      "raw": {
+        "customerName": "Buyer 10"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 36,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 36,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 36,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 36,
+      "raw": {
+        "customerName": "Buyer 9"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 35,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 35,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 35,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 35,
+      "raw": {
+        "customerName": "Buyer 8"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 34,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 34,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 34,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 34,
+      "raw": {
+        "customerName": "Buyer 7"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 33,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 33,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 33,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 33,
+      "raw": {
+        "customerName": "Buyer 6"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 32,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 32,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 32,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 32,
+      "raw": {
+        "customerName": "Buyer 5"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 31,
+      "raw": {
+        "customerName": "Buyer 1"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 31,
+      "raw": {
+        "customerName": "Buyer 2"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 31,
+      "raw": {
+        "customerName": "Buyer 3"
+      }
+    },
+    {
+      "amountNaira": 12500,
+      "daysAgo": 31,
+      "raw": {
+        "customerName": "Buyer 4"
+      }
+    }
+  ],
+  "expected": {
+    "eligible": false,
+    "tier": null,
+    "reasonIncludes": "active loan"
+  }
+}

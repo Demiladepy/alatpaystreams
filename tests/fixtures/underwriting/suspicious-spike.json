@@ -1,0 +1,2104 @@
+{
+  "name": "suspicious-spike",
+  "description": "~10× volume spike — flagged, no offer",
+  "referenceDate": "2025-06-18T12:00:00.000Z",
+  "context": {
+    "hasActiveLoan": false,
+    "accountFrozen": false,
+    "recentOfferWithin7Days": false
+  },
+  "transactions": [
+    {
+      "amountNaira": 4000,
+      "daysAgo": 89,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 89,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 88,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 88,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 87,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 87,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 86,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 86,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 85,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 85,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 84,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 84,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 83,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 83,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 82,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 82,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 81,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 81,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 80,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 80,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 79,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 79,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 78,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 78,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 77,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 77,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 76,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 76,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 75,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 75,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 74,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 74,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 73,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 73,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 72,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 72,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 71,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 71,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 70,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 70,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 69,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 69,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 68,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 68,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 67,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 67,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 66,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 66,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 65,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 65,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 64,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 64,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 63,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 63,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 62,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 62,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 61,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 61,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 60,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 60,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 59,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 59,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 58,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 58,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 57,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 57,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 56,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 56,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 55,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 55,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 54,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 54,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 53,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 53,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 52,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 52,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 51,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 51,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 50,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 50,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 49,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 49,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 48,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 48,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 47,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 47,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 46,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 46,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 45,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 45,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 44,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 44,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 43,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 43,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 42,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 42,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 41,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 41,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 40,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 40,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 39,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 39,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 38,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 38,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 37,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 37,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 36,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 36,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 35,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 35,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 34,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 34,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 33,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 33,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 32,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 32,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 31,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 4000,
+      "daysAgo": 31,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 60,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 60,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 59,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 59,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 58,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 58,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 57,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 57,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 56,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 56,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 55,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 55,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 54,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 54,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 53,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 53,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 52,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 52,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 51,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 51,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 50,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 50,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 49,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 49,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 48,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 48,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 47,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 47,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 46,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 46,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 45,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 45,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 44,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 44,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 43,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 43,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 42,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 42,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 41,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 41,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 40,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 40,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 39,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 39,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 38,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 38,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 37,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 37,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 36,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 36,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 35,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 35,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 34,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 34,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 33,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 33,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 32,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 32,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 31,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 5000,
+      "daysAgo": 31,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 30,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 30,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 30,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 30,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 29,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 29,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 29,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 29,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 28,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 28,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 28,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 28,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 27,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 27,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 27,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 27,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 26,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 26,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 26,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 26,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 25,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 25,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 25,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 25,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 24,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 24,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 24,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 24,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 23,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 23,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 23,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 23,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 22,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 22,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 22,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 22,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 21,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 21,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 21,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 21,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 20,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 20,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 20,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 20,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 19,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 19,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 19,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 19,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 18,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 18,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 18,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 18,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 17,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 17,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 17,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 17,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 16,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 16,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 16,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 16,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 15,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 15,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 15,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 15,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 14,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 14,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 14,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 14,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 13,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 13,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 13,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 13,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 12,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 12,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 12,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 12,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 11,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 11,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 11,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 11,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 10,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 10,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 10,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 10,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 9,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 9,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 9,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 9,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 8,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 8,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 8,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 8,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 7,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 7,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 7,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 7,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 6,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 6,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 6,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 6,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 5,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 5,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 5,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 5,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 4,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 4,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 4,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 4,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 3,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 3,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 3,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 3,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 2,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 2,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 2,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 2,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 1,
+      "raw": {
+        "customerName": "Spike 1"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 1,
+      "raw": {
+        "customerName": "Spike 2"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 1,
+      "raw": {
+        "customerName": "Spike 3"
+      }
+    },
+    {
+      "amountNaira": 25000,
+      "daysAgo": 1,
+      "raw": {
+        "customerName": "Spike 0"
+      }
+    }
+  ],
+  "expected": {
+    "eligible": false,
+    "tier": null,
+    "flagsInclude": "GROWTH_SPIKE_REVIEW",
+    "growthRatioMin": 3
+  }
+}

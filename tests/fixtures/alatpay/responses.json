@@ -1,0 +1,41 @@
+{
+  "payoutSuccess": {
+    "status": "successful",
+    "transactionId": "ALATPAY-fixture-001",
+    "amount": 400000,
+    "timestamp": "2025-06-18T12:00:00.000Z",
+    "balanceAfter": 105000
+  },
+  "payoutPending": {
+    "status": "pending",
+    "transactionId": "ALATPAY-fixture-002",
+    "amount": 250000,
+    "timestamp": "2025-06-18T12:05:00.000Z",
+    "balanceAfter": 80000
+  },
+  "payoutFailedBody": {
+    "status": "failed",
+    "transactionId": "ALATPAY-fixture-fail",
+    "timestamp": "2025-06-18T12:10:00.000Z",
+    "failureReason": "Insufficient merchant balance"
+  },
+  "accountActive": {
+    "accountId": "alatpay_funke_001",
+    "accountName": "Funke Adebayo Beauty Ltd",
+    "balanceNaira": 145000,
+    "status": "active"
+  },
+  "webhookTransaction": {
+    "event": "transaction.received",
+    "timestamp": "2025-06-18T12:00:00.000Z",
+    "data": {
+      "transactionId": "ALATPAY-wh-001",
+      "merchantAccountId": "alatpay_funke_001",
+      "amountNaira": 50000,
+      "customerName": "Adaeze Okafor",
+      "customerPhone": "+2348012345678",
+      "channel": "card",
+      "reference": "REF-fixture-001"
+    }
+  }
+}

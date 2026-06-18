@@ -1,0 +1,4427 @@
+{
+  "name": "concentrated",
+  "description": "Single customer at ~70% of volume — ineligible",
+  "referenceDate": "2025-06-18T12:00:00.000Z",
+  "context": {
+    "hasActiveLoan": false,
+    "accountFrozen": false,
+    "recentOfferWithin7Days": false
+  },
+  "transactions": [
+    {
+      "amountNaira": 10000,
+      "daysAgo": 90,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 90,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 90,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 90,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 90,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 90,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 90,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 89,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 89,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 89,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 89,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 89,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 89,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 89,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 88,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 88,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 88,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 88,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 88,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 88,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 88,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 87,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 87,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 87,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 87,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 87,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 87,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 87,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 86,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 86,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 86,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 86,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 86,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 86,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 86,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 85,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 85,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 85,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 85,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 85,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 85,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 85,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 84,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 84,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 84,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 84,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 84,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 84,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 84,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 83,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 83,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 83,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 83,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 83,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 83,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 83,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 82,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 82,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 82,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 82,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 82,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 82,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 82,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 81,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 81,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 81,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 81,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 81,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 81,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 81,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 80,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 80,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 80,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 80,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 80,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 80,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 80,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 79,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 79,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 79,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 79,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 79,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 79,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 79,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 78,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 78,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 78,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 78,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 78,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 78,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 78,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 77,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 77,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 77,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 77,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 77,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 77,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 77,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 76,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 76,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 76,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 76,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 76,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 76,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 76,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 75,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 75,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 75,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 75,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 75,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 75,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 75,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 74,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 74,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 74,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 74,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 74,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 74,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 74,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 73,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 73,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 73,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 73,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 73,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 73,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 73,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 72,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 72,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 72,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 72,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 72,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 72,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 72,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 71,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 71,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 71,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 71,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 71,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 71,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 71,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 70,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 70,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 70,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 70,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 70,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 70,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 70,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 69,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 69,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 69,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 69,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 69,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 69,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 69,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 68,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 68,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 68,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 68,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 68,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 68,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 68,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 67,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 67,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 67,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 67,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 67,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 67,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 67,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 66,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 66,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 66,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 66,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 66,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 66,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 66,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 65,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 65,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 65,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 65,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 65,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 65,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 65,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 64,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 64,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 64,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 64,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 64,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 64,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 64,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 63,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 63,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 63,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 63,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 63,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 63,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 63,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 62,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 62,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 62,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 62,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 62,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 62,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 62,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 61,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 61,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 61,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 61,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 61,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 61,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 61,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 60,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 60,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 60,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 60,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 60,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 60,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 60,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 59,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 59,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 59,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 59,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 59,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 59,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 59,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 58,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 58,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 58,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 58,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 58,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 58,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 58,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 57,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 57,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 57,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 57,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 57,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 57,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 57,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 56,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 56,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 56,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 56,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 56,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 56,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 56,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 55,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 55,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 55,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 55,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 55,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 55,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 55,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 54,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 54,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 54,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 54,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 54,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 54,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 54,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 53,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 53,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 53,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 53,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 53,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 53,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 53,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 52,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 52,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 52,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 52,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 52,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 52,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 52,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 51,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 51,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 51,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 51,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 51,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 51,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 51,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 50,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 50,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 50,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 50,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 50,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 50,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 50,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 49,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 49,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 49,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 49,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 49,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 49,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 49,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 48,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 48,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 48,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 48,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 48,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 48,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 48,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 47,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 47,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 47,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 47,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 47,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 47,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 47,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 46,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 46,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 46,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 46,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 46,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 46,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 46,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 45,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 45,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 45,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 45,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 45,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 45,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 45,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 44,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 44,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 44,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 44,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 44,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 44,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 44,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 43,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 43,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 43,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 43,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 43,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 43,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 43,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 42,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 42,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 42,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 42,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 42,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 42,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 42,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 41,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 41,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 41,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 41,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 41,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 41,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 41,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 40,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 40,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 40,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 40,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 40,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 40,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 40,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 39,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 39,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 39,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 39,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 39,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 39,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 39,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 38,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 38,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 38,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 38,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 38,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 38,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 38,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 37,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 37,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 37,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 37,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 37,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 37,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 37,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 36,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 36,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 36,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 36,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 36,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 36,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 36,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 35,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 35,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 35,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 35,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 35,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 35,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 35,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 34,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 34,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 34,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 34,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 34,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 34,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 34,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 33,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 33,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 33,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 33,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 33,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 33,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 33,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 32,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 32,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 32,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 32,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 32,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 32,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 32,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 31,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 31,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 31,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 31,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 31,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 31,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 31,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 30,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 30,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 30,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 30,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 30,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 30,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 30,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 29,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 29,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 29,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 29,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 29,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 29,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 29,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 28,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 28,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 28,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 28,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 28,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 28,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 28,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 27,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 27,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 27,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 27,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 27,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 27,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 27,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 26,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 26,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 26,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 26,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 26,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 26,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 26,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 25,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 25,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 25,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 25,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 25,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 25,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 25,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 24,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 24,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 24,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 24,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 24,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 24,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 24,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 23,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 23,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 23,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 23,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 23,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 23,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 23,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 22,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 22,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 22,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 22,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 22,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 22,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 22,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 21,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 21,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 21,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 21,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 21,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 21,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 21,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 20,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 20,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 20,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 20,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 20,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 20,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 20,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 19,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 19,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 19,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 19,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 19,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 19,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 19,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 18,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 18,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 18,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 18,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 18,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 18,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 18,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 17,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 17,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 17,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 17,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 17,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 17,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 17,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 16,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 16,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 16,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 16,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 16,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 16,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 16,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 15,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 15,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 15,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 15,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 15,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 15,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 15,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 14,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 14,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 14,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 14,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 14,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 14,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 14,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 13,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 13,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 13,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 13,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 13,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 13,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 13,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 12,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 12,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 12,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 12,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 12,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 12,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 12,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 11,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 11,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 11,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 11,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 11,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 11,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 11,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 10,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 10,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 10,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 10,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 10,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 10,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 10,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 9,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 9,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 9,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 9,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 9,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 9,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 9,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 8,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 8,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 8,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 8,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 8,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 8,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 8,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 7,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 7,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 7,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 7,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 7,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 7,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 7,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 6,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 6,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 6,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 6,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 6,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 6,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 6,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 5,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 5,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 5,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 5,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 5,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 5,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 5,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 4,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 4,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 4,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 4,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 4,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 4,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 4,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 3,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 3,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 3,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 3,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 3,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 3,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 3,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 2,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 2,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 2,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 2,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 2,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 2,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 2,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 1,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 1,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 1,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 1,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 1,
+      "raw": {
+        "customerName": "Mega Corp"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 1,
+      "raw": {
+        "customerName": "Other 1"
+      }
+    },
+    {
+      "amountNaira": 10000,
+      "daysAgo": 1,
+      "raw": {
+        "customerName": "Other 2"
+      }
+    }
+  ],
+  "expected": {
+    "eligible": false,
+    "tier": null,
+    "topCustomerShareMin": 0.65
+  }
+}
