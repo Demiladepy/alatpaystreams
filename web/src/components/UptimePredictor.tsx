@@ -72,7 +72,8 @@ export function UptimePredictor() {
 
     void fetch(`${base}/api/uptime/${selected.bankCode}/history`)
       .then((r) => (r.ok ? r.json() : []))
-      .then(setHistory);
+      .then(setHistory)
+      .catch(() => setHistory([]));
   }, [selected]);
 
   if (!getApiBaseUrl() || banks.length === 0) return null;

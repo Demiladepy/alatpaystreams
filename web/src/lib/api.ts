@@ -145,6 +145,40 @@ export function useTransactions(merchantId: string = MOCK_MERCHANT_ID) {
   );
 }
 
+export interface Loan {
+  id: string;
+  principal: string;
+  feeNaira: string;
+  outstanding: string;
+  repaymentPercentage: string;
+  status: "OFFERED" | "ACTIVE" | "REPAID" | "EXPIRED";
+  offeredAt: string;
+  acceptedAt: string | null;
+}
+
+async function fetchLoans(merchantId: string): Promise<Loan[]> {
+  if (!getApiBaseUrl()) {
+    return [];
+  }
+
+  try {
+    const loans = await apiFetch<Loan[]>(
+      `/api/merchants/${merchantId}/loans`,
+    );
+    mockMode = false;
+    return loans;
+  } catch {
+    mockMode = true;
+    return [];
+  }
+}
+
+export function useLoans(merchantId: string = MOCK_MERCHANT_ID) {
+  return useSWR(["loans", merchantId], () => fetchLoans(merchantId), {
+    revalidateOnFocus: false,
+  });
+}
+
 export async function simulateTransaction(
   merchantId: string,
   amountNaira: number,

@@ -10,7 +10,14 @@ import { MOCK_MERCHANT_ID } from "@/lib/mocks";
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const { data: merchant } = useMerchant(MOCK_MERCHANT_ID);
-  const showChat = pathname.startsWith("/dashboard") || pathname === "/offers";
+
+  const isLanding = pathname === "/";
+  const showChat =
+    pathname.startsWith("/dashboard") || pathname === "/offers";
+
+  if (isLanding) {
+    return <>{children}</>;
+  }
 
   return (
     <div className="min-h-screen bg-surface">

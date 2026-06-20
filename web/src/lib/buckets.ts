@@ -13,12 +13,12 @@ export const bucketTypeConfig: Record<
   BucketType,
   { icon: LucideIcon; accent: string; label: string }
 > = {
-  TAX: { icon: Receipt, accent: "#D4A24C", label: "Tax" },
-  SAVINGS: { icon: PiggyBank, accent: "#2D6A4F", label: "Savings" },
-  SUPPLIER: { icon: Truck, accent: "#40916C", label: "Supplier" },
-  OWNER_SALARY: { icon: User, accent: "#0F3D2E", label: "Salary" },
-  LOAN_REPAYMENT: { icon: CreditCard, accent: "#B5443A", label: "Loan" },
-  CUSTOM: { icon: Wallet, accent: "#5A7A6E", label: "Custom" },
+  TAX: { icon: Receipt, accent: "#635BFF", label: "Tax" },
+  SAVINGS: { icon: PiggyBank, accent: "#635BFF", label: "Savings" },
+  SUPPLIER: { icon: Truck, accent: "#635BFF", label: "Supplier" },
+  OWNER_SALARY: { icon: User, accent: "#635BFF", label: "Salary" },
+  LOAN_REPAYMENT: { icon: CreditCard, accent: "#635BFF", label: "Loan" },
+  CUSTOM: { icon: Wallet, accent: "#635BFF", label: "Custom" },
 };
 
 export function getBucketConfig(type: BucketType) {

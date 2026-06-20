@@ -38,6 +38,7 @@ function formatTimer(ms: number): string {
 interface MicButtonProps {
   disabled?: boolean;
   processing?: boolean;
+  compact?: boolean;
   onRecordingChange?: (recording: boolean) => void;
   onBlobReady: (blob: Blob, durationMs: number) => void;
   onCancel?: () => void;
@@ -49,11 +50,14 @@ export type MicButtonState = "idle" | "recording" | "processing" | "error";
 export function MicButton({
   disabled,
   processing = false,
+  compact = false,
   onRecordingChange,
   onBlobReady,
   onCancel,
   className,
 }: MicButtonProps) {
+  const [mounted, setMounted] = useState(false);
+  const [voiceSupported, setVoiceSupported] = useState(false);
   const [state, setState] = useState<MicButtonState>("idle");
   const displayState: MicButtonState = processing ? "processing" : state;
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
@@ -157,6 +161,11 @@ export function MicButton({
   }, [cleanupStream, disabled, onRecordingChange, state, stopRecording]);
 
   useEffect(() => {
+    setVoiceSupported(isVoiceSupported());
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape" && state === "recording") {
         stopRecording(true);
@@ -174,7 +183,25 @@ export function MicButton({
     };
   }, [cleanupStream]);
 
-  if (!isVoiceSupported()) return null;
+  // Placeholder matches server + first client paint — avoids hydration mismatch
+  if (!mounted) {
+    return (
+      <div
+        className={cn("relative h-8 w-8 shrink-0", className)}
+        aria-hidden
+      />
+    );
+  }
+
+  if (!voiceSupported) {
+    return (
+      <div
+        className={cn("h-8 w-8 shrink-0", className)}
+        title="Voice not supported in this browser"
+        aria-hidden
+      />
+    );
+  }
 
   return (
     <div className={cn("relative", className)}>
@@ -186,12 +213,12 @@ export function MicButton({
           else if (state === "idle" || state === "error") void startRecording();
         }}
         className={cn(
-          "inline-flex h-9 w-9 items-center justify-center rounded-md border transition-colors",
+          "inline-flex h-8 w-8 items-center justify-center rounded-md border transition-colors",
           state === "recording"
             ? "border-danger/30 bg-danger-subtle text-danger"
             : state === "error"
               ? "border-danger/40 bg-white text-ink-secondary"
-              : "border-border bg-white text-ink-secondary hover:bg-surface",
+              : "border-transparent bg-transparent text-ink-tertiary hover:bg-surface hover:text-ink-secondary",
           displayState === "processing" && "opacity-60",
         )}
         title={errorMsg ?? undefined}
@@ -204,12 +231,12 @@ export function MicButton({
           <Mic className="h-4 w-4" />
         )}
       </button>
-      {state === "recording" && (
+      {state === "recording" && !compact && (
         <span className="absolute -bottom-5 right-0 whitespace-nowrap text-micro text-ink-tertiary">
           {formatTimer(elapsedMs)} / 0:30
         </span>
       )}
-      {state === "error" && errorMsg && (
+      {state === "error" && errorMsg && !compact && (
         <p className="absolute right-0 top-full mt-1 w-48 text-micro text-danger">
           {errorMsg}
         </p>
