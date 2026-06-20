@@ -26,7 +26,7 @@ export function BucketGrid({ buckets, isLoading }: BucketGridProps) {
         {Array.from({ length: 5 }).map((_, i) => (
           <div
             key={i}
-            className="h-52 animate-pulse rounded-2xl bg-white/60 shadow-card"
+            className="h-44 animate-pulse rounded-md border border-border bg-white"
           />
         ))}
       </div>
@@ -40,7 +40,6 @@ export function BucketGrid({ buckets, isLoading }: BucketGridProps) {
           <BucketCard
             key={bucket.id}
             name={bucket.name}
-            type={bucket.type}
             balance={bucket.balance}
             rule={bucket.rule}
             recentActivity={bucket.recentActivity}
@@ -50,22 +49,21 @@ export function BucketGrid({ buckets, isLoading }: BucketGridProps) {
         <button
           type="button"
           onClick={() => setAddOpen(true)}
-          className="flex min-h-[13rem] flex-col items-center justify-center gap-3 rounded-2xl border-2 border-dashed border-forest/10 bg-white/50 p-5 text-muted-foreground shadow-card transition-all hover:border-gold/40 hover:bg-white hover:text-forest hover:shadow-card-hover"
+          className="flex min-h-[11rem] flex-col items-center justify-center gap-2 rounded-md border border-dashed border-border bg-white p-6 text-ink-tertiary transition-colors hover:border-border-strong hover:bg-surface hover:text-ink-secondary"
         >
-          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-cream-dark">
-            <Plus className="h-6 w-6" />
+          <div className="flex h-10 w-10 items-center justify-center rounded-md border border-border bg-surface">
+            <Plus className="h-5 w-5" />
           </div>
-          <span className="text-sm font-medium">Add bucket</span>
+          <span className="text-small font-medium">Add bucket</span>
         </button>
       </div>
 
       <Dialog open={addOpen} onOpenChange={setAddOpen}>
-        <DialogContent>
+        <DialogContent className="rounded-md border-border">
           <DialogHeader>
             <DialogTitle>Add a bucket</DialogTitle>
             <DialogDescription>
-              Bucket creation will be available after onboarding. This modal is
-              a placeholder for now.
+              Bucket creation will be available after onboarding.
             </DialogDescription>
           </DialogHeader>
         </DialogContent>

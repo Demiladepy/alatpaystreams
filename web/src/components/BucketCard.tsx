@@ -1,21 +1,15 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
-import {
-  Area,
-  AreaChart,
-  ResponsiveContainer,
-  YAxis,
-} from "recharts";
-import type { BucketRule, BucketType } from "@/types";
-import { formatNaira, formatRule } from "@/lib/format";
-import { getBucketConfig } from "@/lib/buckets";
+import type { BucketRule } from "@/types";
+import { formatRule } from "@/lib/format";
+import { Naira } from "@/components/ui/Naira";
+import { Pill } from "@/components/ui/Pill";
 import { cn } from "@/lib/utils";
 
 export interface BucketCardProps {
   name: string;
-  type: BucketType;
   balance: string;
   rule: BucketRule;
   recentActivity: number[];
@@ -24,96 +18,86 @@ export interface BucketCardProps {
 
 export function BucketCard({
   name,
-  type,
   balance,
   rule,
   recentActivity,
   className,
 }: BucketCardProps) {
-  const config = getBucketConfig(type);
-  const Icon = config.icon;
+  const [expanded, setExpanded] = useState(false);
   const controls = useAnimation();
   const prevBalance = useRef(balance);
 
   useEffect(() => {
     if (prevBalance.current !== balance) {
       controls.start({
-        scale: [1, 1.03, 1],
-        transition: { duration: 0.4, ease: "easeOut" },
+        scale: [1, 1.015, 1],
+        transition: { duration: 0.15, ease: "easeOut" },
       });
       prevBalance.current = balance;
     }
   }, [balance, controls]);
 
-  const chartData = recentActivity.map((value, i) => ({
-    day: i,
-    amount: value,
-  }));
+  const todayInflow = recentActivity[recentActivity.length - 1] ?? 0;
+  const recentTx = recentActivity
+    .slice(-5)
+    .reverse()
+    .map((amount, i) => ({
+      id: i,
+      amount,
+      label: i === 0 ? "Today" : `${i + 1}d ago`,
+    }));
 
   return (
     <motion.article
+      role="button"
+      tabIndex={0}
+      onClick={() => setExpanded((v) => !v)}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          setExpanded((v) => !v);
+        }
+      }}
+      animate={controls}
       className={cn(
-        "group flex flex-col rounded-2xl bg-white p-5 shadow-card transition-shadow hover:shadow-card-hover",
+        "cursor-pointer rounded-md border border-border bg-white p-6 transition-colors hover:border-border-strong",
         className,
       )}
-      whileHover={{ y: -2 }}
-      transition={{ duration: 0.2 }}
     >
-      <div className="mb-4 flex items-start justify-between gap-3">
-        <div className="flex items-center gap-3">
-          <div
-            className="flex h-10 w-10 items-center justify-center rounded-xl"
-            style={{ backgroundColor: `${config.accent}18` }}
-          >
-            <Icon className="h-5 w-5" style={{ color: config.accent }} />
-          </div>
-          <div className="min-w-0">
-            <h3 className="truncate text-sm font-medium text-forest">{name}</h3>
-            <p className="text-xs text-muted-foreground">{config.label}</p>
-          </div>
-        </div>
-        <span
-          className="shrink-0 rounded-full px-2.5 py-1 text-xs font-medium"
-          style={{
-            backgroundColor: `${config.accent}14`,
-            color: config.accent,
-          }}
-        >
-          {formatRule(rule)}
-        </span>
+      <div className="flex items-center justify-between gap-3">
+        <h3 className="text-small font-medium uppercase tracking-wide text-ink-secondary">
+          {name}
+        </h3>
+        <Pill>{formatRule(rule)}</Pill>
       </div>
 
-      <motion.p
-        animate={controls}
-        className="font-display text-2xl font-semibold tracking-tight text-forest sm:text-3xl"
-      >
-        {formatNaira(balance)}
-      </motion.p>
-
-      <div className="mt-4 h-12 w-full">
-        <ResponsiveContainer width="100%" height="100%">
-          <AreaChart data={chartData} margin={{ top: 0, right: 0, left: 0, bottom: 0 }}>
-            <YAxis hide domain={["dataMin", "dataMax"]} />
-            <defs>
-              <linearGradient id={`grad-${name.replace(/\s+/g, "-")}`} x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor={config.accent} stopOpacity={0.2} />
-                <stop offset="100%" stopColor={config.accent} stopOpacity={0} />
-              </linearGradient>
-            </defs>
-            <Area
-              type="monotone"
-              dataKey="amount"
-              stroke={config.accent}
-              strokeWidth={1.5}
-              fill={`url(#grad-${name.replace(/\s+/g, "-")})`}
-              dot={false}
-              isAnimationActive={false}
-            />
-          </AreaChart>
-        </ResponsiveContainer>
+      <div className="mt-6">
+        <Naira amount={balance} size="lg" />
       </div>
 
-      <p className="mt-2 text-[11px] text-muted-foreground">Last 7 days inflow</p>
+      <p className="mt-4 text-mini text-ink-tertiary">
+        {todayInflow > 0 && (
+          <>
+            <Naira amount={todayInflow} prefix="+" size="sm" className="inline" />
+            {" today · "}
+          </>
+        )}
+        7 days remaining
+      </p>
+
+      {expanded && (
+        <ul className="mt-5 space-y-0 border-t border-border pt-4">
+          {recentTx.map((tx) => (
+            <li
+              key={tx.id}
+              className="flex items-center justify-between border-b border-border py-2.5 last:border-0"
+            >
+              <span className="text-mini text-ink-tertiary">{tx.label}</span>
+              <Naira amount={tx.amount} prefix="+" size="sm" subdued />
+            </li>
+          ))}
+        </ul>
+      )}
     </motion.article>
   );
 }

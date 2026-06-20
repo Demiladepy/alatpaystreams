@@ -1,13 +1,11 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
-import { Loader2, MessageCircle, Mic, Send, Square } from "lucide-react";
+import { Loader2, Mic } from "lucide-react";
 import { getApiBaseUrl, MERCHANT_ID } from "@/lib/api";
 import type { AssistantResponse, ChatApiResult, ChatMessage } from "@/types/chat";
 import { Button } from "@/components/ui/button";
-
-const MAX_RECORDING_MS = 30_000;
+import { MicButton, RecordingDots } from "@/components/MicButton";
 
 function messageId() {
   return `msg-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
@@ -25,16 +23,15 @@ function AssistantContent({
   if (response.type === "buttons") {
     return (
       <div className="space-y-3">
-        <p className="whitespace-pre-wrap text-sm leading-relaxed">{response.body}</p>
+        <p className="whitespace-pre-wrap">{response.body}</p>
         <div className="flex flex-wrap gap-2">
           {response.buttons.map((btn) => (
             <Button
               key={btn.id}
               type="button"
-              variant="outline"
+              variant="secondary"
               size="sm"
               disabled={disabled}
-              className="border-forest/20 bg-white text-forest hover:bg-forest/5"
               onClick={() => onAction(`[${btn.id}] ${btn.title}`)}
             >
               {btn.title}
@@ -48,12 +45,12 @@ function AssistantContent({
   if (response.type === "list") {
     return (
       <div className="space-y-3">
-        <p className="whitespace-pre-wrap text-sm leading-relaxed">{response.body}</p>
-        <div className="rounded-xl border border-forest/10 bg-white/80 p-3">
-          <p className="mb-2 text-xs font-medium uppercase tracking-wide text-muted-foreground">
+        <p className="whitespace-pre-wrap">{response.body}</p>
+        <div className="rounded-md border border-border bg-surface p-3">
+          <p className="mb-2 text-micro font-medium uppercase tracking-wider text-ink-tertiary">
             {response.buttonText}
           </p>
-          <div className="space-y-2">
+          <div className="space-y-1">
             {response.sections.flatMap((section) =>
               section.rows.map((row) => (
                 <button
@@ -61,11 +58,11 @@ function AssistantContent({
                   type="button"
                   disabled={disabled}
                   onClick={() => onAction(`Selected: ${row.title}`)}
-                  className="flex w-full flex-col rounded-lg px-3 py-2 text-left transition-colors hover:bg-forest/5 disabled:opacity-50"
+                  className="flex w-full flex-col rounded-md px-2 py-2 text-left transition-colors hover:bg-white disabled:opacity-50"
                 >
-                  <span className="text-sm font-medium text-forest">{row.title}</span>
+                  <span className="text-small font-medium text-ink-primary">{row.title}</span>
                   {row.description && (
-                    <span className="text-xs text-muted-foreground">{row.description}</span>
+                    <span className="text-mini text-ink-tertiary">{row.description}</span>
                   )}
                 </button>
               )),
@@ -76,22 +73,7 @@ function AssistantContent({
     );
   }
 
-  return <p className="whitespace-pre-wrap text-sm leading-relaxed">{response.body}</p>;
-}
-
-function RecordingDots() {
-  return (
-    <div className="flex items-center gap-1">
-      {[0, 1, 2].map((i) => (
-        <motion.span
-          key={i}
-          className="h-2 w-2 rounded-full bg-red-500"
-          animate={{ opacity: [0.3, 1, 0.3], scale: [0.8, 1.2, 0.8] }}
-          transition={{ duration: 0.8, repeat: Infinity, delay: i * 0.15 }}
-        />
-      ))}
-    </div>
-  );
+  return <p className="whitespace-pre-wrap">{response.body}</p>;
 }
 
 export function ChatPanel({ merchantId = MERCHANT_ID }: { merchantId?: string }) {
@@ -111,14 +93,19 @@ export function ChatPanel({ merchantId = MERCHANT_ID }: { merchantId?: string })
   const [conversationId, setConversationId] = useState<string | undefined>();
   const [loading, setLoading] = useState(false);
   const [recording, setRecording] = useState(false);
+  const [voiceProcessing, setVoiceProcessing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const listRef = useRef<HTMLDivElement>(null);
-  const mediaRecorderRef = useRef<MediaRecorder | null>(null);
-  const chunksRef = useRef<Blob[]>([]);
-  const recordTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  const scrollToBottom = useCallback(() => {
+    requestAnimationFrame(() => {
+      listRef.current?.scrollTo({ top: listRef.current.scrollHeight, behavior: "smooth" });
+    });
+  }, []);
 
   const sendVoice = useCallback(
-    async (blob: Blob) => {
+    async (blob: Blob, durationMs: number) => {
       const base = getApiBaseUrl();
       if (!base) {
         setError("Connect NEXT_PUBLIC_API_URL to use Streams Voice.");
@@ -126,7 +113,7 @@ export function ChatPanel({ merchantId = MERCHANT_ID }: { merchantId?: string })
       }
 
       setError(null);
-      setLoading(true);
+      setVoiceProcessing(true);
 
       try {
         const form = new FormData();
@@ -140,12 +127,14 @@ export function ChatPanel({ merchantId = MERCHANT_ID }: { merchantId?: string })
           body: form,
         });
 
+        const data = (await res.json()) as ChatApiResult & {
+          error?: { message?: string };
+        };
+
         if (!res.ok) {
-          const body = await res.text();
-          throw new Error(body || `Voice error ${res.status}`);
+          throw new Error(data.error?.message ?? `Voice error ${res.status}`);
         }
 
-        const data = (await res.json()) as ChatApiResult;
         setConversationId(data.conversationId);
 
         setMessages((prev) => [
@@ -163,56 +152,16 @@ export function ChatPanel({ merchantId = MERCHANT_ID }: { merchantId?: string })
             response: data.response,
           },
         ]);
+        void durationMs;
       } catch (err) {
         setError(err instanceof Error ? err.message : "Voice failed");
       } finally {
-        setLoading(false);
-        requestAnimationFrame(() => {
-          listRef.current?.scrollTo({ top: listRef.current.scrollHeight, behavior: "smooth" });
-        });
+        setVoiceProcessing(false);
+        scrollToBottom();
       }
     },
-    [conversationId, merchantId],
+    [conversationId, merchantId, scrollToBottom],
   );
-
-  const stopRecording = useCallback(() => {
-    if (recordTimeoutRef.current) {
-      clearTimeout(recordTimeoutRef.current);
-      recordTimeoutRef.current = null;
-    }
-    mediaRecorderRef.current?.stop();
-    setRecording(false);
-  }, []);
-
-  const startRecording = useCallback(async () => {
-    if (loading || recording) return;
-
-    try {
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-      const recorder = new MediaRecorder(stream, { mimeType: "audio/webm;codecs=opus" });
-      chunksRef.current = [];
-      recorder.ondataavailable = (e) => {
-        if (e.data.size > 0) chunksRef.current.push(e.data);
-      };
-      recorder.onstop = () => {
-        stream.getTracks().forEach((t) => t.stop());
-        const blob = new Blob(chunksRef.current, { type: "audio/webm" });
-        if (blob.size > 0) void sendVoice(blob);
-      };
-      mediaRecorderRef.current = recorder;
-      recorder.start();
-      setRecording(true);
-      recordTimeoutRef.current = setTimeout(stopRecording, MAX_RECORDING_MS);
-    } catch {
-      setError("Microphone access denied — allow mic to use Streams Voice.");
-    }
-  }, [loading, recording, sendVoice, stopRecording]);
-
-  useEffect(() => {
-    return () => {
-      if (recordTimeoutRef.current) clearTimeout(recordTimeoutRef.current);
-    };
-  }, []);
 
   const sendMessage = useCallback(
     async (text: string) => {
@@ -229,12 +178,10 @@ export function ChatPanel({ merchantId = MERCHANT_ID }: { merchantId?: string })
       setLoading(true);
       setInput("");
 
-      const userMsg: ChatMessage = {
-        id: messageId(),
-        role: "user",
-        content: trimmed,
-      };
-      setMessages((prev) => [...prev, userMsg]);
+      setMessages((prev) => [
+        ...prev,
+        { id: messageId(), role: "user", content: trimmed },
+      ]);
 
       try {
         const res = await fetch(`${base}/api/chat`, {
@@ -269,94 +216,118 @@ export function ChatPanel({ merchantId = MERCHANT_ID }: { merchantId?: string })
         setError(err instanceof Error ? err.message : "Something went wrong");
       } finally {
         setLoading(false);
-        requestAnimationFrame(() => {
-          listRef.current?.scrollTo({ top: listRef.current.scrollHeight, behavior: "smooth" });
-        });
+        scrollToBottom();
       }
     },
-    [conversationId, loading, merchantId],
+    [conversationId, loading, merchantId, scrollToBottom],
   );
 
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages, scrollToBottom]);
+
   return (
-    <section className="flex flex-col overflow-hidden rounded-2xl border border-forest/10 bg-cream/50 shadow-card">
-      <div className="flex items-center gap-2 border-b border-forest/10 bg-white px-4 py-3">
-        <MessageCircle className="h-4 w-4 text-forest" />
-        <h2 className="font-display text-sm font-semibold text-forest">Co-pilot chat</h2>
-        <span className="ml-auto text-xs text-muted-foreground">Streams Voice · WhatsApp</span>
+    <aside className="fixed bottom-0 right-0 top-14 z-30 hidden w-[400px] flex-col border-l border-border bg-white lg:flex">
+      <div className="flex h-14 shrink-0 items-center justify-between border-b border-border px-4">
+        <h2 className="text-small font-medium text-ink-primary">
+          ALATPay Streams co-pilot
+        </h2>
+        <Mic className="h-4 w-4 text-ink-tertiary" aria-hidden />
       </div>
 
-      <div ref={listRef} className="flex max-h-80 min-h-64 flex-1 flex-col gap-3 overflow-y-auto p-4">
-        {messages.map((msg) => (
-          <div
-            key={msg.id}
-            className={`max-w-[90%] rounded-2xl px-4 py-3 ${
-              msg.role === "user"
-                ? "ml-auto bg-forest text-white"
-                : "mr-auto bg-white text-forest shadow-sm"
-            }`}
-          >
-            {msg.role === "user" && msg.transcript && (
-              <p className="mb-2 text-xs italic opacity-90">
-                🎙 You said: &ldquo;{msg.transcript}&rdquo;
-              </p>
-            )}
-            {msg.role === "assistant" && msg.response ? (
-              <AssistantContent
-                response={msg.response}
-                onAction={sendMessage}
-                disabled={loading}
-              />
-            ) : (
-              <p className="whitespace-pre-wrap text-sm leading-relaxed">{msg.content}</p>
-            )}
-          </div>
-        ))}
+      <div ref={listRef} className="flex flex-1 flex-col gap-4 overflow-y-auto px-4 py-4">
+        {messages.map((msg) =>
+          msg.role === "user" ? (
+            <div
+              key={msg.id}
+              className="ml-6 border-r-2 border-accent pr-3 text-right text-small text-ink-primary"
+            >
+              {msg.transcript ? (
+                <span>
+                  <span className="mr-1 text-ink-tertiary" aria-label="Voice message">
+                    🎙
+                  </span>
+                  {msg.transcript}
+                </span>
+              ) : (
+                msg.content
+              )}
+            </div>
+          ) : (
+            <div key={msg.id} className="mr-6 text-small leading-relaxed text-ink-secondary">
+              <span className="mr-1.5 text-accent">✦</span>
+              {msg.response ? (
+                <AssistantContent
+                  response={msg.response}
+                  onAction={sendMessage}
+                  disabled={loading || voiceProcessing}
+                />
+              ) : (
+                msg.content
+              )}
+            </div>
+          ),
+        )}
+
         {recording && (
-          <div className="mr-auto flex items-center gap-2 rounded-2xl bg-red-50 px-4 py-3 text-sm text-red-700">
+          <div className="flex items-center gap-2 text-mini text-ink-tertiary">
             <RecordingDots />
-            Recording… tap mic to stop
+            Recording…
           </div>
         )}
-        {loading && !recording && (
-          <div className="mr-auto flex items-center gap-2 rounded-2xl bg-white px-4 py-3 text-sm text-muted-foreground shadow-sm">
-            <Loader2 className="h-4 w-4 animate-spin" />
-            Thinking…
+
+        {(loading || voiceProcessing) && !recording && (
+          <div className="flex items-center gap-2 text-mini text-ink-tertiary">
+            <Loader2 className="h-3.5 w-3.5 animate-spin" />
+            {voiceProcessing ? "Transcribing…" : "Thinking…"}
           </div>
         )}
       </div>
 
-      {error && <p className="px-4 pb-2 text-xs text-red-600">{error}</p>}
+      {error && (
+        <p className="px-4 pb-2 text-mini text-danger">{error}</p>
+      )}
 
-      <form
-        className="flex gap-2 border-t border-forest/10 bg-white p-3"
-        onSubmit={(e) => {
-          e.preventDefault();
-          void sendMessage(input);
-        }}
-      >
-        <input
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          placeholder="Ask about buckets, loans, or today's sales…"
-          disabled={loading || recording}
-          className="flex-1 rounded-xl border border-forest/15 bg-cream/30 px-3 py-2 text-sm outline-none ring-forest/30 focus:ring-2"
-        />
-        <Button
-          type="button"
-          variant="outline"
-          disabled={loading}
-          onClick={() => (recording ? stopRecording() : void startRecording())}
-          className={`shrink-0 ${recording ? "border-red-300 bg-red-50 text-red-600 animate-pulse" : ""}`}
-        >
-          {recording ? <Square className="h-4 w-4" /> : <Mic className="h-4 w-4" />}
-        </Button>
-        <Button type="submit" disabled={loading || recording || !input.trim()} className="shrink-0">
-          <Send className="h-4 w-4" />
-        </Button>
-      </form>
-      <p className="border-t border-forest/5 bg-white px-4 pb-3 text-center text-xs italic text-muted-foreground">
-        Streams Voice — speak naturally, the co-pilot understands.
-      </p>
-    </section>
+      <div className="shrink-0 border-t border-border p-3">
+        <div className="flex items-end gap-2">
+          <textarea
+            ref={textareaRef}
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" && !e.shiftKey) {
+                e.preventDefault();
+                void sendMessage(input);
+              }
+            }}
+            placeholder={recording ? "" : "Ask about buckets, loans, or sales…"}
+            disabled={loading || recording || voiceProcessing}
+            rows={1}
+            className="h-9 min-h-[36px] max-h-24 flex-1 resize-none rounded-md border border-border bg-white px-3 py-2 text-small text-ink-primary outline-none focus:border-border-strong"
+          />
+          <MicButton
+            disabled={loading}
+            processing={voiceProcessing}
+            onRecordingChange={setRecording}
+            onBlobReady={(blob, ms) => void sendVoice(blob, ms)}
+          />
+          <Button
+            type="button"
+            size="icon"
+            variant="secondary"
+            disabled={loading || recording || voiceProcessing || !input.trim()}
+            onClick={() => void sendMessage(input)}
+          >
+            ↵
+          </Button>
+        </div>
+        {recording && (
+          <div className="mt-2 flex items-center gap-2">
+            <RecordingDots />
+          </div>
+        )}
+        <p className="mt-2 text-micro text-ink-quaternary">↵ to send</p>
+      </div>
+    </aside>
   );
 }

@@ -11,7 +11,6 @@ import type {
 import {
   MOCK_MERCHANT_ID,
   getMockBucketsWithActivity,
-  mockBuckets,
   mockMerchant,
   mockTransactions,
   simulateMockTransaction,

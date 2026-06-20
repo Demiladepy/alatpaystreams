@@ -39,11 +39,10 @@ export function DemoBurstButton({
     <div className="flex flex-col items-end gap-1">
       <Button
         type="button"
-        variant="outline"
+        variant="secondary"
         size="sm"
         onClick={triggerBurst}
         disabled={loading}
-        className="border-gold/40 text-forest hover:bg-gold/10"
       >
         {loading ? (
           <Loader2 className="h-4 w-4 animate-spin" />
@@ -53,7 +52,7 @@ export function DemoBurstButton({
         Trigger demo burst
       </Button>
       {status && (
-        <p className="max-w-xs text-right text-[11px] text-muted-foreground">
+        <p className="max-w-xs text-right text-micro text-ink-tertiary">
           {status}
         </p>
       )}

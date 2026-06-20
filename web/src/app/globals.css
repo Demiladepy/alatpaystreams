@@ -2,30 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #faf6f0;
-  --foreground: #0f3d2e;
-  --card: #ffffff;
-  --card-foreground: #0f3d2e;
-  --primary: #0f3d2e;
-  --primary-foreground: #faf6f0;
-  --muted: #f0ebe3;
-  --muted-foreground: #5a7a6e;
-  --accent: #d4a24c;
-  --accent-foreground: #0f3d2e;
-  --border: rgba(15, 61, 46, 0.08);
-  --ring: #d4a24c;
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: var(--font-inter), system-ui, sans-serif;
+  color: #0a0a0a;
+  background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+  font-family: var(--font-inter), Inter, system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .tabular {
+    font-variant-numeric: tabular-nums;
   }
 }

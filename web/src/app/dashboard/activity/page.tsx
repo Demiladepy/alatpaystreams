@@ -1,8 +1,8 @@
 "use client";
 
-import { formatDate, formatNaira } from "@/lib/format";
-import { getBucketConfig } from "@/lib/buckets";
+import { formatDate } from "@/lib/format";
 import { useTransactions, MERCHANT_ID } from "@/lib/api";
+import { Naira } from "@/components/ui/Naira";
 import { Nfc } from "lucide-react";
 
 function txChannel(raw: unknown): string | null {
@@ -17,93 +17,91 @@ export default function ActivityPage() {
 
   if (isLoading) {
     return (
-      <div className="space-y-4">
-        {Array.from({ length: 6 }).map((_, i) => (
-          <div
-            key={i}
-            className="h-28 animate-pulse rounded-2xl bg-white/60 shadow-card"
-          />
-        ))}
-      </div>
+      <div className="h-64 animate-pulse rounded-md border border-border bg-white" />
     );
   }
 
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="font-display text-2xl font-semibold text-forest">
-          Activity
-        </h1>
-        <p className="mt-1 text-sm text-muted-foreground">
+        <h1 className="text-2xl font-semibold text-ink-primary">Activity</h1>
+        <p className="mt-1 text-small text-ink-tertiary">
           Recent transactions and how they were split.
         </p>
       </div>
 
-      <div className="space-y-3">
-        {transactions?.map((tx) => {
-          const channel = txChannel((tx as { raw?: unknown }).raw);
-          const isTap = channel === "tap_and_pay";
+      <div className="overflow-hidden rounded-md border border-border bg-white">
+        <table className="w-full">
+          <thead>
+            <tr className="border-b border-border">
+              <th className="px-6 py-3 text-left text-mini font-medium uppercase tracking-wider text-ink-tertiary">
+                Date
+              </th>
+              <th className="px-6 py-3 text-left text-mini font-medium uppercase tracking-wider text-ink-tertiary">
+                Amount
+              </th>
+              <th className="px-6 py-3 text-left text-mini font-medium uppercase tracking-wider text-ink-tertiary">
+                Source
+              </th>
+              <th className="px-6 py-3 text-left text-mini font-medium uppercase tracking-wider text-ink-tertiary">
+                Splits
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {transactions?.map((tx) => {
+              const channel = txChannel((tx as { raw?: unknown }).raw);
+              const isTap = channel === "tap_and_pay";
 
-          return (
-            <article
-              key={tx.id}
-              className="rounded-2xl bg-white p-5 shadow-card"
-            >
-              <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-                <div>
-                  <div className="flex items-center gap-2">
-                    <p className="font-display text-lg font-semibold text-forest">
-                      {formatNaira(tx.amountNaira)}
-                    </p>
-                    {isTap && (
-                      <Nfc className="h-4 w-4 text-gold" aria-label="Tap and Pay" />
-                    )}
-                  </div>
-                  <p className="text-xs text-muted-foreground">
+              return (
+                <tr
+                  key={tx.id}
+                  className="border-b border-border transition-colors last:border-0 hover:bg-surface"
+                >
+                  <td className="px-6 py-4 text-small text-ink-secondary">
                     {formatDate(tx.receivedAt)}
-                    {tx.externalRef && ` · ${tx.externalRef}`}
-                    {isTap && " · Tap & Pay"}
-                  </p>
-                </div>
-                <span className="w-fit rounded-full bg-cream-dark px-2.5 py-1 text-xs font-medium text-muted-foreground">
-                  {tx.source.replace("_", " ").toLowerCase()}
-                </span>
-              </div>
-
-              <div className="mt-4 flex flex-wrap gap-2">
-                {tx.splits.map((split) => {
-                  const bucketType = split.bucket?.type;
-                  const config = bucketType ? getBucketConfig(bucketType) : null;
-                  const label = split.bucket?.name ?? "Operating";
-
-                  return (
-                    <div
-                      key={split.id}
-                      className="flex items-center gap-2 rounded-xl px-3 py-2"
-                      style={{
-                        backgroundColor: config
-                          ? `${config.accent}12`
-                          : "rgba(15,61,46,0.06)",
-                      }}
-                    >
-                      <span className="text-xs font-medium text-forest">{label}</span>
-                      <span
-                        className="font-display text-sm font-semibold"
-                        style={{ color: config?.accent ?? "#0F3D2E" }}
-                      >
-                        {formatNaira(split.amountNaira)}
+                    {tx.externalRef && (
+                      <span className="mt-0.5 block text-mini text-ink-tertiary">
+                        {tx.externalRef}
                       </span>
+                    )}
+                  </td>
+                  <td className="px-6 py-4">
+                    <div className="flex items-center gap-2">
+                      <Naira amount={tx.amountNaira} size="sm" />
+                      {isTap && (
+                        <Nfc className="h-3.5 w-3.5 text-ink-tertiary" aria-label="Tap and Pay" />
+                      )}
                     </div>
-                  );
-                })}
-              </div>
-            </article>
-          );
-        })}
+                  </td>
+                  <td className="px-6 py-4 text-small capitalize text-ink-secondary">
+                    {tx.source.replace("_", " ").toLowerCase()}
+                    {isTap && (
+                      <span className="ml-2 text-mini text-ink-tertiary">Tap & Pay</span>
+                    )}
+                  </td>
+                  <td className="px-6 py-4">
+                    <div className="flex flex-wrap gap-2">
+                      {tx.splits.map((split) => (
+                        <span
+                          key={split.id}
+                          className="inline-flex items-center gap-1.5 text-mini text-ink-secondary"
+                        >
+                          <span>{split.bucket?.name ?? "Operating"}</span>
+                          <Naira amount={split.amountNaira} size="sm" subdued />
+                        </span>
+                      ))}
+                    </div>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
 
         {transactions?.length === 0 && (
-          <p className="py-12 text-center text-muted-foreground">
-            No transactions yet. Use &ldquo;Simulate transaction&rdquo; to get started.
+          <p className="py-12 text-center text-small text-ink-tertiary">
+            No transactions yet. Use Simulate transaction to get started.
           </p>
         )}
       </div>

@@ -1,17 +1,10 @@
 import type { BucketType } from "@/types";
 
-/** Animation palette — distinct from static BucketCard accents for flow clarity */
-export const splitFlowColors: Record<BucketType, string> = {
-  TAX: "#B5443A",
-  SAVINGS: "#0F3D2E",
-  SUPPLIER: "#4A5568",
-  OWNER_SALARY: "#D4A24C",
-  LOAN_REPAYMENT: "#C4623B",
-  CUSTOM: "#2D3748",
-};
+/** Single accent for all flow paths — infrastructure-grade, not rainbow buckets */
+export const FLOW_ACCENT = "#635BFF";
 
-export function getFlowColor(type: BucketType): string {
-  return splitFlowColors[type] ?? splitFlowColors.CUSTOM;
+export function getFlowColor(): string {
+  return FLOW_ACCENT;
 }
 
 export function particleCountForAmount(amountNaira: number): number {

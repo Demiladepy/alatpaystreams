@@ -9,52 +9,68 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        forest: {
-          DEFAULT: "#0F3D2E",
-          light: "#1A5C45",
-          muted: "#2D6A4F",
+        background: "#FFFFFF",
+        surface: "#FAFAFA",
+        card: "#FFFFFF",
+        border: {
+          DEFAULT: "#E5E7EB",
+          strong: "#D1D5DB",
         },
-        cream: {
-          DEFAULT: "#FAF6F0",
-          dark: "#F0EBE3",
+        ink: {
+          primary: "#0A0A0A",
+          secondary: "#404040",
+          tertiary: "#737373",
+          quaternary: "#A3A3A3",
         },
-        gold: {
-          DEFAULT: "#D4A24C",
-          light: "#E8C47A",
+        accent: {
+          DEFAULT: "#635BFF",
+          hover: "#5851E0",
+          subtle: "#F3F2FF",
+        },
+        success: {
+          DEFAULT: "#0E9F6E",
+          subtle: "#ECFDF5",
         },
         warning: {
-          DEFAULT: "#B5443A",
-          light: "#D4655C",
+          DEFAULT: "#D97706",
+          subtle: "#FFFBEB",
         },
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-        card: "var(--card)",
-        "card-foreground": "var(--card-foreground)",
-        primary: "var(--primary)",
-        "primary-foreground": "var(--primary-foreground)",
-        muted: "var(--muted)",
-        "muted-foreground": "var(--muted-foreground)",
-        accent: "var(--accent)",
-        "accent-foreground": "var(--accent-foreground)",
-        border: "var(--border)",
-        ring: "var(--ring)",
+        danger: {
+          DEFAULT: "#DC2626",
+          subtle: "#FEF2F2",
+        },
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        display: ["var(--font-space-grotesk)", "system-ui", "sans-serif"],
+        sans: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"],
+      },
+      fontSize: {
+        micro: ["11px", { lineHeight: "16px", letterSpacing: "0.02em" }],
+        mini: ["12px", { lineHeight: "16px" }],
+        small: ["13px", { lineHeight: "20px" }],
+        base: ["14px", { lineHeight: "20px" }],
+        body: ["15px", { lineHeight: "24px" }],
+        lg: ["17px", { lineHeight: "24px" }],
+        xl: ["20px", { lineHeight: "28px", letterSpacing: "-0.01em" }],
+        "2xl": ["24px", { lineHeight: "32px", letterSpacing: "-0.015em" }],
+        "3xl": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em" }],
+        "4xl": ["44px", { lineHeight: "48px", letterSpacing: "-0.025em" }],
+        display: [
+          "56px",
+          {
+            lineHeight: "60px",
+            letterSpacing: "-0.03em",
+            fontWeight: "500",
+          },
+        ],
       },
       borderRadius: {
-        "2xl": "1rem",
-        "3xl": "1.5rem",
-      },
-      boxShadow: {
-        card: "0 2px 16px -4px rgba(15, 61, 46, 0.08), 0 4px 24px -8px rgba(15, 61, 46, 0.06)",
-        "card-hover": "0 4px 24px -4px rgba(15, 61, 46, 0.12), 0 8px 32px -8px rgba(15, 61, 46, 0.08)",
+        md: "6px",
+        lg: "8px",
       },
       keyframes: {
         "fade-in": {
-          from: { opacity: "0", transform: "translateY(4px)" },
-          to: { opacity: "1", transform: "translateY(0)" },
+          from: { opacity: "0" },
+          to: { opacity: "1" },
         },
       },
       animation: {

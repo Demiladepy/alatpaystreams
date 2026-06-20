@@ -17,11 +17,12 @@ import {
 } from "framer-motion";
 import { CreditCard, Smartphone, ArrowLeftRight, CheckCircle2, Nfc } from "lucide-react";
 import type { BucketWithActivity } from "@/types";
-import { formatNaira, formatRule } from "@/lib/format";
-import { getBucketConfig } from "@/lib/buckets";
+import { formatRule } from "@/lib/format";
+import { Naira } from "@/components/ui/Naira";
+import { Pill } from "@/components/ui/Pill";
 import {
   ANIMATION_QUEUE_GAP_MS,
-  getFlowColor,
+  FLOW_ACCENT,
   particleCountForAmount,
   type StreamTransaction,
   type StreamSplit,
@@ -230,7 +231,7 @@ export function SplitFlow({ merchantId, buckets }: SplitFlowProps) {
         p1,
         p2,
         p3,
-        color: getFlowColor(split.bucketType),
+        color: FLOW_ACCENT,
         split,
       });
     });
@@ -407,12 +408,11 @@ export function SplitFlow({ merchantId, buckets }: SplitFlowProps) {
         if (nextProgress > 0.9) opacity = (1 - nextProgress) / 0.1;
 
         ctx.save();
-        ctx.globalAlpha = opacity;
-        ctx.fillStyle = path.color;
-        ctx.font = `bold ${12 * p.scale}px "Space Grotesk", sans-serif`;
-        ctx.textAlign = "center";
-        ctx.textBaseline = "middle";
-        ctx.fillText("₦", pt.x, pt.y);
+        ctx.globalAlpha = opacity * 0.8;
+        ctx.fillStyle = FLOW_ACCENT;
+        ctx.beginPath();
+        ctx.arc(pt.x, pt.y, 3 * p.scale, 0, Math.PI * 2);
+        ctx.fill();
         ctx.restore();
 
         remaining.push({ ...p, progress: nextProgress });
@@ -443,66 +443,58 @@ export function SplitFlow({ merchantId, buckets }: SplitFlowProps) {
             className="mb-8 overflow-hidden"
           >
             <div className="mb-3 flex items-center justify-between">
-              <h2 className="font-display text-sm font-semibold uppercase tracking-wider text-forest/70">
+              <h2 className="text-mini font-medium uppercase tracking-wider text-ink-tertiary">
                 Live split
               </h2>
-              <span className="text-xs text-muted-foreground">
+              <span className="text-mini text-ink-tertiary">
                 Queued animations run one at a time (+{ANIMATION_QUEUE_GAP_MS}ms gap)
               </span>
             </div>
 
-            <div ref={containerRef} className="relative rounded-3xl bg-cream-dark/50 p-4 sm:p-6">
+            <div ref={containerRef} className="relative rounded-md border border-border bg-surface p-4 sm:p-6">
               <AnimatePresence>
                 {cardVisible && (
                   <motion.div
                     ref={sourceRef}
-                    initial={{ opacity: 0, scale: 0.95, y: -12 }}
-                    animate={{ opacity: 1, scale: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ duration: 0.3, ease: "easeOut" }}
-                    className="relative mx-auto mb-4 max-w-md rounded-2xl bg-white p-5 shadow-card"
-                    style={{
-                      boxShadow: "0 0 40px -8px rgba(212, 162, 76, 0.45)",
-                    }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.25, ease: "easeOut" }}
+                    className="relative mx-auto mb-4 max-w-md rounded-md border border-border bg-white p-5"
                   >
-                    <motion.div
-                      className="pointer-events-none absolute inset-0 rounded-2xl"
-                      animate={{ opacity: [0.3, 0.6, 0.3] }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                      style={{
-                        boxShadow: "inset 0 0 24px rgba(212, 162, 76, 0.15)",
-                      }}
-                    />
                     <div className="flex items-start justify-between gap-3">
                       <div>
                         <div className="flex flex-wrap items-center gap-2">
-                          <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                          <p className="text-micro font-medium uppercase tracking-wide text-ink-tertiary">
                             Incoming payment
                           </p>
                           {active.channel === "tap_and_pay" && (
-                            <span className="inline-flex items-center gap-1 rounded-full bg-gold/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-gold">
+                            <Pill variant="accent" className="gap-1 uppercase">
                               <Nfc className="h-3 w-3" />
                               Tap & Pay
-                            </span>
+                            </Pill>
                           )}
                         </div>
-                        <p className="mt-1 font-medium text-forest">
+                        <p className="mt-1 text-small font-medium text-ink-primary">
                           {active.customerName}
                         </p>
-                        <p className="text-xs text-muted-foreground">
+                        <p className="text-mini text-ink-tertiary">
                           {new Date(active.receivedAt).toLocaleTimeString("en-NG", {
                             hour: "2-digit",
                             minute: "2-digit",
                           })}
                         </p>
                       </div>
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gold/15">
-                        <ChannelIcon className="h-5 w-5 text-gold" />
+                      <div className="flex h-9 w-9 items-center justify-center rounded-md border border-border bg-surface">
+                        <ChannelIcon className="h-4 w-4 text-ink-secondary" />
                       </div>
                     </div>
-                    <p className="mt-4 font-display text-3xl font-semibold text-forest">
-                      {formatNaira(reducedMotion ? parseFloat(active.amountNaira) : displayAmount)}
-                    </p>
+                    <div className="mt-4">
+                      <Naira
+                        amount={reducedMotion ? parseFloat(active.amountNaira) : displayAmount}
+                        size="lg"
+                      />
+                    </div>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -519,18 +511,15 @@ export function SplitFlow({ merchantId, buckets }: SplitFlowProps) {
                             key={path.key}
                             d={path.d}
                             fill="none"
-                            stroke={path.color}
-                            strokeOpacity={pathsVisible ? 0.6 : 0}
-                            strokeWidth={2.5}
+                            stroke={FLOW_ACCENT}
+                            strokeOpacity={pathsVisible ? 0.2 : 0}
+                            strokeWidth={1.5}
                             strokeLinecap="round"
                             strokeDasharray={path.length}
                             strokeDashoffset={offset}
                             initial={{ opacity: 0 }}
                             animate={{ opacity: pathsVisible ? 1 : 0 }}
                             transition={{ duration: 0.3 }}
-                            style={{
-                              filter: `drop-shadow(0 0 6px ${path.color}40)`,
-                            }}
                           />
                         );
                       })}
@@ -546,15 +535,14 @@ export function SplitFlow({ merchantId, buckets }: SplitFlowProps) {
               <div className="flex gap-3 overflow-x-auto pb-2 pt-2">
                 {activeSplits.map((split, index) => {
                   const key = split.bucketId ?? `op-${index}`;
-                  const config = getBucketConfig(split.bucketType);
-                  const Icon = config.icon;
-                  const color = getFlowColor(split.bucketType);
                   const balance =
                     split.bucketId && bucketDisplay[split.bucketId] !== undefined
                       ? bucketDisplay[split.bucketId]
                       : bucketBalanceMap[split.bucketId ?? ""] ?? 0;
                   const bucket = buckets.find((b) => b.id === split.bucketId);
                   const rule = bucket?.rule ?? split.rule;
+                  const pulsing = split.bucketId && bucketPulse[split.bucketId];
+                  const flashing = split.bucketId && depositFlash[split.bucketId];
 
                   return (
                     <motion.div
@@ -565,50 +553,29 @@ export function SplitFlow({ merchantId, buckets }: SplitFlowProps) {
                         }
                       }}
                       animate={{
-                        scale: split.bucketId && bucketPulse[split.bucketId] ? [1, 1.04, 1] : 1,
+                        scale: pulsing ? [1, 1.015, 1] : 1,
                       }}
-                      transition={{ duration: 0.2 }}
-                      className="relative min-w-[160px] flex-1 rounded-2xl bg-white p-4 shadow-card"
+                      transition={{ duration: 0.15 }}
+                      className={`relative min-w-[160px] flex-1 rounded-md border bg-white p-4 transition-colors ${
+                        flashing ? "border-accent" : "border-border"
+                      }`}
                     >
-                      {split.bucketId && depositFlash[split.bucketId] && (
-                        <motion.div
-                          className="absolute inset-x-4 top-0 h-1 rounded-full"
-                          initial={{ opacity: 0.9, scaleX: 0.2 }}
-                          animate={{ opacity: 0, scaleX: 1 }}
-                          transition={{ duration: 0.35 }}
-                          style={{ backgroundColor: color }}
-                        />
-                      )}
-                      <div className="flex items-center gap-2">
-                        <div
-                          className="flex h-8 w-8 items-center justify-center rounded-lg"
-                          style={{ backgroundColor: `${color}18` }}
-                        >
-                          <Icon className="h-4 w-4" style={{ color }} />
-                        </div>
-                        <div className="min-w-0 flex-1">
-                          <p className="truncate text-xs font-medium text-forest">
-                            {split.bucketName}
-                          </p>
-                          {rule && (
-                            <span
-                              className="text-[10px] font-medium"
-                              style={{ color }}
-                            >
-                              {formatRule(rule as { kind: "PERCENTAGE" | "FIXED" | "WEEKLY_FIXED"; value: number })}
-                            </span>
-                          )}
-                        </div>
+                      <div className="min-w-0">
+                        <p className="truncate text-micro font-medium uppercase tracking-wide text-ink-secondary">
+                          {split.bucketName}
+                        </p>
+                        {rule && (
+                          <Pill className="mt-1">
+                            {formatRule(rule as { kind: "PERCENTAGE" | "FIXED" | "WEEKLY_FIXED"; value: number })}
+                          </Pill>
+                        )}
                       </div>
-                      <p
-                        className="mt-2 font-display text-lg font-semibold"
-                        style={{ color }}
-                      >
-                        +{formatNaira(split.amountNaira)}
-                      </p>
+                      <div className="mt-2">
+                        <Naira amount={split.amountNaira} prefix="+" size="md" />
+                      </div>
                       {split.bucketId && (
-                        <p className="mt-1 text-xs text-muted-foreground">
-                          → {formatNaira(balance)}
+                        <p className="mt-1 text-mini text-ink-tertiary">
+                          → <Naira amount={balance} size="sm" subdued className="inline" />
                         </p>
                       )}
                     </motion.div>
@@ -626,9 +593,9 @@ export function SplitFlow({ merchantId, buckets }: SplitFlowProps) {
             initial={{ opacity: 0, y: 16, x: 16 }}
             animate={{ opacity: 1, y: 0, x: 0 }}
             exit={{ opacity: 0, y: 8 }}
-            className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-2xl bg-forest px-4 py-3 text-sm text-cream shadow-card"
+            className="fixed bottom-6 right-6 z-50 rounded-md border border-border bg-white px-4 py-2.5 text-small text-ink-secondary lg:right-[424px]"
           >
-            <CheckCircle2 className="h-4 w-4 text-gold" />
+            <CheckCircle2 className="mr-2 inline h-3.5 w-3.5 text-success" />
             {toast}
           </motion.div>
         )}

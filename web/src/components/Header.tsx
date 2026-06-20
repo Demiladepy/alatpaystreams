@@ -1,12 +1,12 @@
 "use client";
 
-import { useState } from "react";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Sparkles, Loader2 } from "lucide-react";
+import Link from "next/link";
+import { ChevronDown, Loader2 } from "lucide-react";
+import { useState } from "react";
 import type { Merchant } from "@/types";
 import { maskAccountId } from "@/lib/format";
-import { simulateTransaction, MOCK_MERCHANT_ID } from "@/lib/api";
+import { simulateTransaction, MERCHANT_ID } from "@/lib/api";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import {
@@ -31,6 +31,7 @@ const navLinks = [
 export function Header({ merchant }: HeaderProps) {
   const pathname = usePathname();
   const [simulateOpen, setSimulateOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [amount, setAmount] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -46,10 +47,7 @@ export function Header({ merchant }: HeaderProps) {
     setSubmitting(true);
     setError(null);
     try {
-      await simulateTransaction(
-        merchant?.id ?? MOCK_MERCHANT_ID,
-        parsed,
-      );
+      await simulateTransaction(merchant?.id ?? MERCHANT_ID, parsed);
       setSimulateOpen(false);
       setAmount("");
     } catch {
@@ -61,67 +59,68 @@ export function Header({ merchant }: HeaderProps) {
 
   return (
     <>
-      <header className="sticky top-0 z-40 border-b border-forest/5 bg-cream/90 backdrop-blur-md">
-        <div className="mx-auto flex max-w-[1200px] flex-col gap-4 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
-          <div className="min-w-0">
-            <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+      <header className="sticky top-0 z-40 h-14 border-b border-border bg-white">
+        <div className="mx-auto flex h-14 max-w-[1200px] items-center justify-between px-4 sm:px-8">
+          <div className="flex items-center gap-8">
+            <Link href="/dashboard" className="text-body font-medium text-ink-primary">
               ALATPay Streams
-            </p>
-            <h1 className="truncate font-display text-xl font-semibold text-forest">
-              {merchant?.name ?? "Loading…"}
-            </h1>
-            <p className="text-xs text-muted-foreground">
-              {maskAccountId(merchant?.alatpayAccountId)}
-            </p>
-          </div>
-
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-            <nav className="flex gap-1 rounded-xl bg-white/60 p-1 shadow-card">
+            </Link>
+            <nav className="hidden items-center gap-1 sm:flex">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "rounded-lg px-3 py-1.5 text-sm font-medium transition-colors",
+                    "rounded-md px-3 py-1.5 text-small font-medium transition-colors",
                     pathname === link.href
-                      ? "bg-forest text-cream"
-                      : "text-muted-foreground hover:text-forest",
+                      ? "bg-surface text-ink-primary"
+                      : "text-ink-tertiary hover:text-ink-secondary",
                   )}
                 >
                   {link.label}
                 </Link>
               ))}
             </nav>
+          </div>
 
-            <Button
-              variant="accent"
-              size="default"
-              className="w-full sm:w-auto"
-              onClick={() => setSimulateOpen(true)}
-            >
-              <Sparkles className="h-4 w-4" />
+          <div className="flex items-center gap-3">
+            <Button variant="secondary" size="sm" onClick={() => setSimulateOpen(true)}>
               Simulate transaction
             </Button>
+            <button
+              type="button"
+              onClick={() => setMenuOpen((v) => !v)}
+              className="inline-flex items-center gap-2 rounded-md border border-border px-3 py-1.5 text-small text-ink-secondary hover:bg-surface"
+            >
+              <span className="max-w-[140px] truncate">
+                {merchant?.name ?? "Merchant"}
+              </span>
+              <ChevronDown className="h-3.5 w-3.5 text-ink-tertiary" />
+            </button>
+            {menuOpen && (
+              <div className="absolute right-4 top-14 z-50 min-w-[200px] rounded-md border border-border bg-white p-2 shadow-none sm:right-8">
+                <p className="px-2 py-1.5 text-mini text-ink-tertiary">
+                  {maskAccountId(merchant?.alatpayAccountId)}
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </header>
 
       <Dialog open={simulateOpen} onOpenChange={setSimulateOpen}>
-        <DialogContent>
+        <DialogContent className="rounded-md border-border">
           <DialogHeader>
             <DialogTitle>Simulate incoming payment</DialogTitle>
             <DialogDescription>
-              Enter an amount to split across your buckets — the demo trigger.
+              Enter an amount to split across your buckets.
             </DialogDescription>
           </DialogHeader>
 
           <form onSubmit={handleSimulate} className="space-y-4">
             <div>
-              <label
-                htmlFor="amount"
-                className="mb-2 block text-sm font-medium text-forest"
-              >
-                Amount (₦)
+              <label htmlFor="amount" className="mb-2 block text-small font-medium text-ink-primary">
+                Amount
               </label>
               <Input
                 id="amount"
@@ -134,16 +133,9 @@ export function Header({ merchant }: HeaderProps) {
               />
             </div>
 
-            {error && (
-              <p className="text-sm text-warning">{error}</p>
-            )}
+            {error && <p className="text-small text-danger">{error}</p>}
 
-            <Button
-              type="submit"
-              variant="default"
-              className="w-full"
-              disabled={submitting}
-            >
+            <Button type="submit" className="w-full" disabled={submitting}>
               {submitting ? (
                 <>
                   <Loader2 className="h-4 w-4 animate-spin" />

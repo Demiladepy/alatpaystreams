@@ -9,8 +9,9 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { Activity } from "lucide-react";
 import { getApiBaseUrl } from "@/lib/api";
+import { StatusDot } from "@/components/ui/StatusDot";
+import { Card, CardBody } from "@/components/ui/Card";
 import {
   Dialog,
   DialogContent,
@@ -27,10 +28,16 @@ export interface BankHealth {
   prediction: { expectedSettlementSeconds: number; advisory: string };
 }
 
-function statusStyles(status: BankHealth["status"]) {
-  if (status === "healthy") return "bg-emerald-100 text-emerald-800";
-  if (status === "degraded") return "bg-amber-100 text-amber-900";
-  return "bg-red-100 text-red-800";
+function statusVariant(status: BankHealth["status"]) {
+  if (status === "healthy") return "success" as const;
+  if (status === "degraded") return "warning" as const;
+  return "danger" as const;
+}
+
+function statusLabel(status: BankHealth["status"]) {
+  if (status === "healthy") return "Healthy";
+  if (status === "degraded") return "Degraded";
+  return "Offline";
 }
 
 export function UptimePredictor() {
@@ -72,11 +79,9 @@ export function UptimePredictor() {
 
   return (
     <section className="space-y-4">
-      <div className="flex items-center gap-2">
-        <Activity className="h-4 w-4 text-forest" />
-        <h2 className="font-display text-lg font-semibold text-forest">
-          Streams Uptime — Bank Availability
-        </h2>
+      <div>
+        <h2 className="text-lg font-medium text-ink-primary">Streams Uptime</h2>
+        <p className="text-small text-ink-tertiary">Bank availability for payouts</p>
       </div>
 
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -85,28 +90,31 @@ export function UptimePredictor() {
             key={bank.bankCode}
             type="button"
             onClick={() => setSelected(bank)}
-            className="rounded-2xl bg-white p-4 text-left shadow-card transition-shadow hover:shadow-card-hover"
+            className="text-left transition-colors"
           >
-            <div className="flex items-center justify-between gap-2">
-              <p className="font-medium text-forest">{bank.bankName}</p>
-              <span
-                className={`rounded-full px-2 py-0.5 text-xs font-medium capitalize ${statusStyles(bank.status)}`}
-              >
-                {bank.status}
-              </span>
-            </div>
-            <p className="mt-2 font-display text-lg font-semibold text-forest">
-              {(bank.recentSuccessRate * 100).toFixed(1)}%
-            </p>
-            <p className="text-xs text-muted-foreground">
-              avg {(bank.avgSettlementMs / 1000).toFixed(1)}s settlement
-            </p>
+            <Card className="hover:border-border-strong">
+              <CardBody className="py-4">
+                <div className="flex items-center justify-between gap-2">
+                  <p className="text-small font-medium text-ink-primary">{bank.bankName}</p>
+                  <StatusDot
+                    label={statusLabel(bank.status)}
+                    variant={statusVariant(bank.status)}
+                  />
+                </div>
+                <p className="mt-3 tabular text-xl font-medium text-ink-primary">
+                  {(bank.recentSuccessRate * 100).toFixed(1)}%
+                </p>
+                <p className="text-mini text-ink-tertiary">
+                  avg {(bank.avgSettlementMs / 1000).toFixed(1)}s settlement
+                </p>
+              </CardBody>
+            </Card>
           </button>
         ))}
       </div>
 
       <Dialog open={!!selected} onOpenChange={() => setSelected(null)}>
-        <DialogContent>
+        <DialogContent className="rounded-md border-border">
           <DialogHeader>
             <DialogTitle>{selected?.bankName} — 24h success rate</DialogTitle>
           </DialogHeader>
@@ -115,18 +123,18 @@ export function UptimePredictor() {
               <AreaChart data={history}>
                 <XAxis dataKey="hour" hide />
                 <YAxis domain={[0, 1]} tickFormatter={(v) => `${Math.round(v * 100)}%`} />
-                <Tooltip formatter={(v: number) => `${(v * 100).toFixed(1)}%`} />
+                <Tooltip formatter={(v) => `${(Number(v) * 100).toFixed(1)}%`} />
                 <Area
                   type="monotone"
                   dataKey="successRate"
-                  stroke="#0F3D2E"
-                  fill="#D4A24C33"
+                  stroke="#635BFF"
+                  fill="#635BFF22"
                 />
               </AreaChart>
             </ResponsiveContainer>
           </div>
           {selected && (
-            <p className="text-sm text-muted-foreground">{selected.prediction.advisory}</p>
+            <p className="text-small text-ink-tertiary">{selected.prediction.advisory}</p>
           )}
         </DialogContent>
       </Dialog>

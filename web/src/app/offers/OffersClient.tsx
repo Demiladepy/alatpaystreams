@@ -2,8 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { CreditCard, Clock } from "lucide-react";
-import { formatNaira } from "@/lib/format";
 import { getApiBaseUrl, MERCHANT_ID } from "@/lib/api";
+import { Naira } from "@/components/ui/Naira";
+import { Pill } from "@/components/ui/Pill";
+import { Card, CardBody } from "@/components/ui/Card";
 
 interface Loan {
   id: string;
@@ -16,12 +18,12 @@ interface Loan {
   acceptedAt: string | null;
 }
 
-function statusBadge(status: Loan["status"]) {
+function statusPill(status: Loan["status"]) {
   const map = {
-    OFFERED: "bg-gold/15 text-gold",
-    ACTIVE: "bg-forest/10 text-forest",
-    REPAID: "bg-emerald-100 text-emerald-800",
-    EXPIRED: "bg-gray-100 text-gray-600",
+    OFFERED: "accent" as const,
+    ACTIVE: "success" as const,
+    REPAID: "neutral" as const,
+    EXPIRED: "neutral" as const,
   };
   return map[status];
 }
@@ -46,52 +48,49 @@ export default function OffersClient() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="font-display text-2xl font-semibold text-forest">
-          Loan offers
-        </h1>
-        <p className="mt-1 text-sm text-muted-foreground">
+        <h1 className="text-2xl font-semibold text-ink-primary">Loan offers</h1>
+        <p className="mt-1 text-small text-ink-tertiary">
           Working-capital offers from your ALATPay sales history.
         </p>
       </div>
 
       {loading && (
-        <div className="h-32 animate-pulse rounded-2xl bg-white/60 shadow-card" />
+        <div className="h-32 animate-pulse rounded-md border border-border bg-white" />
       )}
 
       {!loading && loans.length === 0 && (
-        <div className="flex flex-col items-center justify-center rounded-2xl bg-white px-6 py-16 shadow-card">
-          <CreditCard className="mb-4 h-7 w-7 text-muted-foreground" />
-          <p className="text-center text-muted-foreground">
-            No offers yet. Ask the co-pilot about your sales to check eligibility.
-          </p>
-        </div>
+        <Card>
+          <CardBody className="flex flex-col items-center py-16">
+            <CreditCard className="mb-4 h-7 w-7 text-ink-quaternary" />
+            <p className="text-center text-small text-ink-tertiary">
+              No offers yet. Ask the co-pilot about your sales to check eligibility.
+            </p>
+          </CardBody>
+        </Card>
       )}
 
       <div className="space-y-3">
         {loans.map((loan) => (
-          <article key={loan.id} className="rounded-2xl bg-white p-5 shadow-card">
-            <div className="flex flex-wrap items-start justify-between gap-3">
-              <div>
-                <p className="font-display text-xl font-semibold text-forest">
-                  {formatNaira(loan.principal)}
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  Fee {formatNaira(loan.feeNaira)} · Repay {loan.repaymentPercentage}% per sale
-                </p>
+          <Card key={loan.id}>
+            <CardBody>
+              <div className="flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <Naira amount={loan.principal} size="lg" />
+                  <p className="mt-1 text-small text-ink-tertiary">
+                    Fee <Naira amount={loan.feeNaira} size="sm" className="inline" /> · Repay{" "}
+                    {loan.repaymentPercentage}% per sale
+                  </p>
+                </div>
+                <Pill variant={statusPill(loan.status)}>{loan.status.toLowerCase()}</Pill>
               </div>
-              <span
-                className={`rounded-full px-3 py-1 text-xs font-medium ${statusBadge(loan.status)}`}
-              >
-                {loan.status.toLowerCase()}
-              </span>
-            </div>
-            {loan.status === "ACTIVE" && (
-              <p className="mt-3 flex items-center gap-1.5 text-sm text-muted-foreground">
-                <Clock className="h-3.5 w-3.5" />
-                Outstanding: {formatNaira(loan.outstanding)}
-              </p>
-            )}
-          </article>
+              {loan.status === "ACTIVE" && (
+                <p className="mt-3 flex items-center gap-1.5 text-small text-ink-tertiary">
+                  <Clock className="h-3.5 w-3.5" />
+                  Outstanding: <Naira amount={loan.outstanding} size="sm" className="inline" />
+                </p>
+              )}
+            </CardBody>
+          </Card>
         ))}
       </div>
     </div>
