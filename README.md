@@ -2,6 +2,8 @@
 
 Programmable income routing backend for Nigerian SMEs. Incoming payments are split across tax reserves, savings, supplier payments, owner salary, loan repayments, and custom buckets according to merchant-defined rules.
 
+**Wema alignment (ALAT: The Evolution):** Streams Voice · Tap & Pay routing · Streams Uptime bank prediction. See `docs/PITCH.md`.
+
 ## Stack
 
 - Node.js 20+ / TypeScript
@@ -64,6 +66,10 @@ The server listens on `http://localhost:3000`.
 | `GET` | `/api/merchants/:id/buckets` | List active buckets with balances |
 | `GET` | `/api/merchants/:id/transactions?limit=50` | Recent transactions with splits |
 | `POST` | `/api/transactions/simulate` | Apply a split for `{ merchantId, amountNaira }` |
+| `POST` | `/api/chat` | AI co-pilot (text) |
+| `POST` | `/api/chat/voice` | AI co-pilot (voice, multipart) |
+| `GET` | `/api/uptime` | Bank availability grid |
+| `GET` | `/api/merchants/:id/loans` | Loan offers & status |
 
 ### Example flow
 

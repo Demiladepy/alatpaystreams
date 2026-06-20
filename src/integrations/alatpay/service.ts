@@ -3,6 +3,7 @@ import { logger } from '../../lib/logger';
 import { ALATPayHttpClient } from './client';
 import { cachePayout, getCachedPayout } from './redisStore';
 import { CircuitBreaker } from './retry';
+import { recordPayoutAttempt } from '../../services/uptimeMonitor';
 import {
   extractEmbeddedSignature,
   verifyWebhookSignature as verifySignature,
@@ -58,7 +59,7 @@ function normalizeAccountStatus(raw: string): AccountStatus {
 }
 
 function normalizeChannel(raw: string): PaymentChannel {
-  if (raw === 'card' || raw === 'transfer' || raw === 'ussd') {
+  if (raw === 'card' || raw === 'transfer' || raw === 'ussd' || raw === 'tap_and_pay') {
     return raw;
   }
   return 'unknown';
@@ -117,6 +118,7 @@ export const alatpayService: ALATPayService = {
     }
 
     try {
+      const start = Date.now();
       const raw = await getHttpClient().postPayout({
         merchantAccountId: input.merchantAccountId,
         amountNaira: input.amountNaira.toNumber(),
@@ -125,6 +127,15 @@ export const alatpayService: ALATPayService = {
       });
 
       const result = mapPayoutResponse(raw);
+      const settlementMs = Date.now() - start;
+
+      if (input.destinationBankCode) {
+        await recordPayoutAttempt(
+          input.destinationBankCode,
+          result.status !== 'failed',
+          settlementMs,
+        );
+      }
 
       if (result.status === 'failed') {
         payoutCircuit.recordFailure();
@@ -163,6 +174,8 @@ export const alatpayService: ALATPayService = {
       accountName: raw.accountName,
       balanceNaira: new Decimal(raw.balanceNaira),
       status: normalizeAccountStatus(raw.status),
+      bankCode: raw.bankCode,
+      bankName: raw.bankName,
     };
   },
 

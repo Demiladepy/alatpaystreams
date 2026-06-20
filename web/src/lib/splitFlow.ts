@@ -32,7 +32,7 @@ export interface StreamTransaction {
   transactionId: string;
   amountNaira: string;
   customerName: string;
-  channel: "card" | "transfer" | "ussd";
+  channel: "card" | "transfer" | "ussd" | "tap_and_pay";
   splits: StreamSplit[];
   receivedAt: string;
 }

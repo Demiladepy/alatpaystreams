@@ -66,6 +66,44 @@ export async function applySplit(input: ApplySplitInput): Promise<ApplySplitOutp
       }
     }
 
+    const loanRepaymentTotal = computedSplits
+      .filter((split) => {
+        if (!split.bucketId) return false;
+        const bucket = buckets.find((b) => b.id === split.bucketId);
+        return bucket?.type === 'LOAN_REPAYMENT';
+      })
+      .reduce((sum, split) => sum.plus(new Decimal(split.amountNaira)), new Decimal(0));
+
+    if (loanRepaymentTotal.gt(0)) {
+      const activeLoan = await tx.loan.findFirst({
+        where: { merchantId: input.merchantId, status: 'ACTIVE' },
+        orderBy: { acceptedAt: 'desc' },
+      });
+
+      if (activeLoan) {
+        const newOutstanding = new Decimal(activeLoan.outstanding.toString()).minus(
+          loanRepaymentTotal,
+        );
+        const repaid = newOutstanding.lte(0);
+
+        await tx.loan.update({
+          where: { id: activeLoan.id },
+          data: {
+            outstanding: repaid ? '0' : newOutstanding.toFixed(2),
+            status: repaid ? 'REPAID' : 'ACTIVE',
+            repaidAt: repaid ? now : null,
+          },
+        });
+
+        if (repaid) {
+          await tx.bucket.updateMany({
+            where: { merchantId: input.merchantId, type: 'LOAN_REPAYMENT', isActive: true },
+            data: { isActive: false },
+          });
+        }
+      }
+    }
+
     await tx.ledgerEvent.create({
       data: {
         merchantId: input.merchantId,

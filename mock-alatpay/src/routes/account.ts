@@ -17,6 +17,8 @@ router.get('/:merchantAccountId', async (req: Request, res: Response, next: Next
       accountName: merchant.accountName,
       balanceNaira: merchant.balanceNaira,
       status: merchant.status,
+      bankCode: merchant.bankCode ?? 'GTB',
+      bankName: merchant.bankName ?? 'GTBank',
     };
 
     res.json(response);

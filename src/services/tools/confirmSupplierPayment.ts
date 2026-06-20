@@ -3,6 +3,9 @@ import { Prisma } from '@prisma/client';
 import { prisma } from '../../lib/db';
 import { alatpayService } from '../../integrations/alatpay';
 import Decimal from 'decimal.js';
+import { resolveMerchantBank, resolveSupplierBank } from '../bankResolver';
+import { enqueueDeferredPayout } from '../payoutQueue';
+import { getBankHealth } from '../uptimeMonitor';
 
 export interface ConfirmSupplierPaymentInput {
   merchantId: string;
@@ -40,12 +43,29 @@ export async function confirmSupplierPayment(input: ConfirmSupplierPaymentInput)
 
     pending.delete(input.confirmationId);
 
-    const payout = await alatpayService.payout({
+    const supplierBank = resolveSupplierBank(record.supplierName);
+    const health = await getBankHealth(supplierBank.bankCode);
+
+    const payoutInput = {
       merchantAccountId: merchant.alatpayAccountId,
       amountNaira: new Decimal(record.amountNaira),
       narration: `Supplier payment — ${record.supplierName}`,
       reference: `SUP-${input.confirmationId}`,
-    });
+      destinationBankCode: supplierBank.bankCode,
+    };
+
+    if (health.status === 'offline') {
+      await enqueueDeferredPayout(payoutInput);
+      return {
+        success: true,
+        status: 'queued',
+        amountNaira: record.amountNaira,
+        supplierName: record.supplierName,
+        message: `${supplierBank.bankName} is degraded — payment queued for retry.`,
+      };
+    }
+
+    const payout = await alatpayService.payout(payoutInput);
 
     await prisma.ledgerEvent.create({
       data: {
@@ -69,6 +89,9 @@ export async function confirmSupplierPayment(input: ConfirmSupplierPaymentInput)
   }
 
   const confirmationId = crypto.randomUUID();
+  const supplierBank = resolveSupplierBank(input.supplierName);
+  const health = await getBankHealth(supplierBank.bankCode);
+
   pending.set(confirmationId, {
     merchantId: input.merchantId,
     supplierName: input.supplierName,
@@ -78,13 +101,21 @@ export async function confirmSupplierPayment(input: ConfirmSupplierPaymentInput)
 
   setTimeout(() => pending.delete(confirmationId), 30 * 60 * 1000);
 
+  const uptimeLine =
+    health.status === 'healthy'
+      ? `${supplierBank.bankName} looking healthy — expected settlement in ${health.prediction.expectedSettlementSeconds} seconds.`
+      : health.status === 'degraded'
+        ? `Note: ${supplierBank.bankName} is slow today (~${health.prediction.expectedSettlementSeconds}s expected).`
+        : `${supplierBank.bankName} is degraded — payment will queue if you confirm.`;
+
   return {
     success: true,
     status: 'pending',
     confirmationId,
     supplierName: input.supplierName,
     amountNaira: input.amountNaira,
-    message: `Ready to pay ${input.supplierName} ₦${input.amountNaira.toLocaleString('en-NG')}. Reply YES to confirm.`,
+    message: `${uptimeLine} Confirm payment of ₦${input.amountNaira.toLocaleString('en-NG')} to ${input.supplierName}? Reply YES to confirm.`,
+    bankHealth: health,
   };
 }
 

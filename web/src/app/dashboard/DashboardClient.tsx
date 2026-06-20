@@ -14,6 +14,8 @@ import { SplitFlow } from "@/components/SplitFlow";
 
 import { DemoBurstButton } from "@/components/DemoBurstButton";
 import { ChatPanel } from "@/components/ChatPanel";
+import { MockModeBanner } from "@/components/MockModeBanner";
+import { UptimePredictor } from "@/components/UptimePredictor";
 
 import { useBuckets, getApiBaseUrl, MERCHANT_ID } from "@/lib/api";
 import { formatNaira } from "@/lib/format";
@@ -43,6 +45,7 @@ export default function DashboardClient() {
   return (
 
     <div className="space-y-8">
+      <MockModeBanner />
 
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
 
@@ -131,6 +134,8 @@ export default function DashboardClient() {
         <BucketGrid buckets={buckets ?? []} isLoading={isLoading} />
 
       </section>
+
+      <UptimePredictor />
 
     </div>
 

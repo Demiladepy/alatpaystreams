@@ -2,6 +2,9 @@ import Decimal from 'decimal.js';
 import { Prisma } from '@prisma/client';
 import { prisma } from '../../lib/db';
 import { alatpayService } from '../../integrations/alatpay';
+import { resolveMerchantBank } from '../bankResolver';
+import { enqueueDeferredPayout } from '../payoutQueue';
+import { getBankHealth } from '../uptimeMonitor';
 
 export interface AcceptLoanInput {
   loanId: string;
@@ -23,6 +26,9 @@ export async function acceptLoan(input: AcceptLoanInput) {
   if (!merchant?.alatpayAccountId) {
     throw new Error('Merchant has no ALATPay account linked');
   }
+
+  const bank = await resolveMerchantBank(merchant.alatpayAccountId);
+  const health = await getBankHealth(bank.bankCode);
 
   const maxPriority = await prisma.bucket.aggregate({
     where: { merchantId: loan.merchantId },
@@ -56,6 +62,8 @@ export async function acceptLoan(input: AcceptLoanInput) {
           loanId: loan.id,
           bucketId: bucket.id,
           principal: loan.principal.toString(),
+          bankCode: bank.bankCode,
+          uptimeStatus: health.status,
         } as unknown as Prisma.InputJsonValue,
       },
     });
@@ -63,12 +71,36 @@ export async function acceptLoan(input: AcceptLoanInput) {
     return bucket;
   });
 
-  const payout = await alatpayService.payout({
+  const payoutInput = {
     merchantAccountId: merchant.alatpayAccountId,
     amountNaira: new Decimal(loan.principal.toString()),
     narration: `ALATPay Streams loan disbursement ${loan.id}`,
     reference: `LOAN-${loan.id}`,
-  });
+    destinationBankCode: bank.bankCode,
+  };
+
+  const uptimeNote =
+    health.status === 'healthy'
+      ? `Approved. Your account at ${bank.bankName} — healthy, ${(health.recentSuccessRate * 100).toFixed(1)}% uptime today. Sending ₦${parseFloat(loan.principal.toString()).toLocaleString('en-NG')} now, expected to land in ${health.prediction.expectedSettlementSeconds} seconds.`
+      : health.status === 'degraded'
+        ? `Approved. Note: ${bank.bankName} is running slow today (${(health.recentSuccessRate * 100).toFixed(1)}% uptime) — expected settlement ~${health.prediction.expectedSettlementSeconds} seconds. Sending ₦${parseFloat(loan.principal.toString()).toLocaleString('en-NG')} now.`
+        : `Approved. ${bank.bankName} is currently degraded — we'll process ₦${parseFloat(loan.principal.toString()).toLocaleString('en-NG')} in the next few minutes. Your loan bucket is already active.`;
+
+  if (health.status === 'offline') {
+    await enqueueDeferredPayout(payoutInput);
+    return {
+      disbursed: false,
+      queued: true,
+      transactionId: null,
+      newBucketId: result.id,
+      principal: loan.principal.toString(),
+      payoutStatus: 'pending' as const,
+      uptimeNote,
+      bankHealth: health,
+    };
+  }
+
+  const payout = await alatpayService.payout(payoutInput);
 
   if (payout.status === 'failed') {
     throw new Error(
@@ -79,10 +111,13 @@ export async function acceptLoan(input: AcceptLoanInput) {
 
   return {
     disbursed: payout.status === 'successful' || payout.status === 'pending',
+    queued: false,
     transactionId: payout.transactionId,
     newBucketId: result.id,
     principal: loan.principal.toString(),
     payoutStatus: payout.status,
+    uptimeNote,
+    bankHealth: health,
   };
 }
 

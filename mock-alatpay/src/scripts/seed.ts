@@ -178,13 +178,17 @@ function generateTransactions(plans: DayPlan[], merchantId: string, now: Date): 
       const ts = startOfDay(plan.date);
       ts.setMinutes(ts.getMinutes() + i * 45 + Math.floor(Math.random() * 20));
 
+      const daysAgo = Math.floor(
+        (now.getTime() - ts.getTime()) / (1000 * 60 * 60 * 24),
+      );
+
       transactions.push({
         transactionId: generateTransactionId(),
         merchantAccountId: merchantId,
         amountNaira: isRefund ? -amounts[i] : amounts[i],
         customerName: pickCustomerWithRepeat(),
         customerPhone: randomNigerianPhone(),
-        channel: pickChannel(),
+        channel: pickChannel(daysAgo),
         reference: generateReference(),
         timestamp: ts.toISOString(),
         type: isRefund ? 'refund' : 'payment',
@@ -214,6 +218,8 @@ export function buildSeedData(now = new Date()): {
     balanceNaira: 145_000,
     status: 'active',
     createdAt: createdAt.toISOString(),
+    bankCode: 'GTB',
+    bankName: 'GTBank',
   };
 
   const plans = buildDayPlans(now);

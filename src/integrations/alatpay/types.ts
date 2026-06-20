@@ -2,13 +2,14 @@ import Decimal from 'decimal.js';
 
 export type PayoutStatus = 'successful' | 'pending' | 'failed';
 export type AccountStatus = 'active' | 'frozen' | 'closed';
-export type PaymentChannel = 'card' | 'transfer' | 'ussd' | 'unknown';
+export type PaymentChannel = 'card' | 'transfer' | 'ussd' | 'tap_and_pay' | 'unknown';
 
 export interface PayoutInput {
   merchantAccountId: string;
   amountNaira: Decimal;
   narration: string;
   reference: string;
+  destinationBankCode?: string;
 }
 
 export interface PayoutResult {
@@ -24,6 +25,8 @@ export interface AccountInfo {
   accountName: string;
   balanceNaira: Decimal;
   status: AccountStatus;
+  bankCode?: string;
+  bankName?: string;
 }
 
 export interface ParsedWebhook {
@@ -96,6 +99,8 @@ export interface RawAccountResponse {
   accountName: string;
   balanceNaira: number;
   status: string;
+  bankCode?: string;
+  bankName?: string;
 }
 
 export interface MockWebhookPayload {

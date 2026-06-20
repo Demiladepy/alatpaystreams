@@ -58,10 +58,11 @@ export function pickCustomerName(): string {
   return CUSTOMER_NAMES[Math.floor(Math.random() * CUSTOMER_NAMES.length)];
 }
 
-export function pickChannel(): PaymentChannel {
+export function pickChannel(daysAgo = 999): PaymentChannel {
   const r = Math.random();
-  if (r < 0.55) return 'card';
-  if (r < 0.85) return 'transfer';
+  if (daysAgo <= 30 && r < 0.15) return 'tap_and_pay';
+  if (r < 0.5) return 'card';
+  if (r < 0.8) return 'transfer';
   return 'ussd';
 }
 

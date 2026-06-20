@@ -57,4 +57,16 @@ router.get('/:id/transactions', async (req: Request, res: Response, next: NextFu
   }
 });
 
+router.get('/:id/loans', async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const loans = await prisma.loan.findMany({
+      where: { merchantId: String(req.params.id) },
+      orderBy: { offeredAt: 'desc' },
+    });
+    res.json(loans);
+  } catch (error) {
+    next(error);
+  }
+});
+
 export default router;

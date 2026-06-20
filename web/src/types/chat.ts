@@ -28,6 +28,7 @@ export type ChatMessage = {
   id: string;
   role: "user" | "assistant";
   content: string;
+  transcript?: string;
   response?: AssistantResponse;
 };
 
@@ -36,4 +37,5 @@ export type ChatApiResult = {
   response: AssistantResponse;
   toolsCalled: string[];
   conversationId: string;
+  transcript?: string;
 };

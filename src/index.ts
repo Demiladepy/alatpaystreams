@@ -9,12 +9,17 @@ import transactionsRouter from './routes/transactions';
 import chatRouter from './routes/chat';
 import webhooksRouter from './routes/webhooks';
 import alatpayHealthRouter from './routes/alatpayHealth';
+import uptimeRouter from './routes/uptime';
 import { startWhatsAppWorker, whatsappWebhookRouter } from './integrations/whatsapp';
+import { seedUptimeMonitor } from './services/uptimeMonitor';
+import { startPayoutWorker } from './services/payoutQueue';
 
 const app = express();
 const port = parseInt(process.env.PORT ?? '3000', 10);
 
 logALATPayStartupMode();
+
+void seedUptimeMonitor();
 
 app.use(
   '/webhooks/alatpay',
@@ -40,6 +45,7 @@ app.use('/api/merchants', streamRouter);
 app.use('/api/buckets', bucketsRouter);
 app.use('/api/transactions', transactionsRouter);
 app.use('/api/chat', chatRouter);
+app.use('/api/uptime', uptimeRouter);
 app.use('/api/webhooks', webhooksRouter);
 app.use('/api/alatpay', alatpayHealthRouter);
 
@@ -71,6 +77,7 @@ app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
 
 if (process.env.NODE_ENV !== 'test') {
   startWhatsAppWorker();
+  startPayoutWorker();
 }
 
 app.listen(port, () => {

@@ -15,7 +15,7 @@ import {
   useMotionValue,
   animate,
 } from "framer-motion";
-import { CreditCard, Smartphone, ArrowLeftRight, CheckCircle2 } from "lucide-react";
+import { CreditCard, Smartphone, ArrowLeftRight, CheckCircle2, Nfc } from "lucide-react";
 import type { BucketWithActivity } from "@/types";
 import { formatNaira, formatRule } from "@/lib/format";
 import { getBucketConfig } from "@/lib/buckets";
@@ -71,6 +71,7 @@ interface SplitFlowProps {
 }
 
 function channelIcon(channel: StreamTransaction["channel"]) {
+  if (channel === "tap_and_pay") return Nfc;
   if (channel === "card") return CreditCard;
   if (channel === "ussd") return Smartphone;
   return ArrowLeftRight;
@@ -474,9 +475,17 @@ export function SplitFlow({ merchantId, buckets }: SplitFlowProps) {
                     />
                     <div className="flex items-start justify-between gap-3">
                       <div>
-                        <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
-                          Incoming payment
-                        </p>
+                        <div className="flex flex-wrap items-center gap-2">
+                          <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                            Incoming payment
+                          </p>
+                          {active.channel === "tap_and_pay" && (
+                            <span className="inline-flex items-center gap-1 rounded-full bg-gold/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-gold">
+                              <Nfc className="h-3 w-3" />
+                              Tap & Pay
+                            </span>
+                          )}
+                        </div>
                         <p className="mt-1 font-medium text-forest">
                           {active.customerName}
                         </p>

@@ -1,4 +1,4 @@
-export type PaymentChannel = 'card' | 'transfer' | 'ussd';
+export type PaymentChannel = 'card' | 'transfer' | 'ussd' | 'tap_and_pay';
 
 export type TransactionType = 'payment' | 'refund' | 'payout';
 
@@ -11,6 +11,8 @@ export interface Merchant {
   balanceNaira: number;
   status: 'active' | 'suspended';
   createdAt: string;
+  bankCode?: string;
+  bankName?: string;
 }
 
 export interface Transaction {
@@ -47,6 +49,8 @@ export interface AccountResponse {
   accountName: string;
   balanceNaira: number;
   status: string;
+  bankCode: string;
+  bankName: string;
 }
 
 export interface SimulatePaymentRequest {
