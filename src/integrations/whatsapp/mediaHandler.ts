@@ -1,4 +1,5 @@
 import { logger } from '../../lib/logger';
+import { transcribeVoiceAudio } from '../voice/transcribe';
 
 const GRAPH_API_VERSION = 'v21.0';
 
@@ -49,33 +50,11 @@ export async function downloadWhatsAppMedia(mediaId: string): Promise<Buffer> {
   return Buffer.from(arrayBuffer);
 }
 
+/** Transcribe via Streams Voice (YarnGPT — Nigerian local context). */
 export async function transcribeAudio(audioBuffer: Buffer, mimeType = 'audio/ogg'): Promise<string> {
-  const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) {
-    throw new Error('OPENAI_API_KEY is not configured for voice transcription');
-  }
-
-  const ext = mimeType.includes('mpeg') ? 'mp3' : mimeType.includes('mp4') ? 'm4a' : 'ogg';
-  const blob = new Blob([audioBuffer], { type: mimeType });
-  const formData = new FormData();
-  formData.append('file', blob, `voice.${ext}`);
-  formData.append('model', 'whisper-1');
-  formData.append('language', 'en');
-
-  const res = await fetch('https://api.openai.com/v1/audio/transcriptions', {
-    method: 'POST',
-    headers: { Authorization: `Bearer ${apiKey}` },
-    body: formData,
-  });
-
-  if (!res.ok) {
-    const err = await res.text();
-    logger.error({ status: res.status, err }, 'Whisper transcription failed');
-    throw new Error(`Transcription failed: ${err}`);
-  }
-
-  const data = (await res.json()) as { text?: string };
-  return (data.text ?? '').trim();
+  const result = await transcribeVoiceAudio(audioBuffer, mimeType);
+  logger.info({ provider: result.provider, language: result.language }, 'Voice transcribed');
+  return result.text;
 }
 
 export async function transcribeVoiceNote(mediaId: string, mimeType?: string): Promise<string> {

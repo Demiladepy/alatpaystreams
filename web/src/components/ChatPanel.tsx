@@ -311,7 +311,7 @@ export function ChatPanel({ merchantId = MERCHANT_ID }: { merchantId?: string })
           </div>
           <div>
             <h2 className="text-small font-medium text-ink-primary">Co-pilot</h2>
-            <p className="text-micro text-ink-tertiary">Text · Streams Voice</p>
+            <p className="text-micro text-ink-tertiary">Text · Streams Voice (YarnGPT)</p>
           </div>
         </div>
         <StatusDot
@@ -369,7 +369,7 @@ export function ChatPanel({ merchantId = MERCHANT_ID }: { merchantId?: string })
         {(loading || voiceProcessing) && !recording && (
           <div className="flex items-center gap-2 text-mini text-ink-tertiary">
             <Loader2 className="h-3.5 w-3.5 animate-spin text-accent" />
-            {voiceProcessing ? "Transcribing your voice…" : "Thinking…"}
+            {voiceProcessing ? "Transcribing with YarnGPT…" : "Thinking…"}
           </div>
         )}
       </div>

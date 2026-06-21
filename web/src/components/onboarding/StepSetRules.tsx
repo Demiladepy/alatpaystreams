@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { Mic, Sparkles } from "lucide-react";
 import type { OnboardingBucket } from "@/lib/onboarding";
 import { parseRuleFromText } from "@/lib/onboarding";
 import { getBucketConfig } from "@/lib/buckets";
+import { getApiBaseUrl } from "@/lib/api";
 import { MicButton } from "@/components/MicButton";
 import { Pill } from "@/components/ui/Pill";
 import { cn } from "@/lib/utils";
@@ -16,7 +17,63 @@ interface StepSetRulesProps {
 
 export function StepSetRules({ buckets = [], onUpdate }: StepSetRulesProps) {
   const [activeVoiceType, setActiveVoiceType] = useState<string | null>(null);
+  const [voiceProcessing, setVoiceProcessing] = useState(false);
+  const [voiceError, setVoiceError] = useState<string | null>(null);
   const totalPct = buckets.reduce((s, b) => s + b.percentage, 0);
+
+  const transcribeVoice = useCallback(
+    async (bucketType: OnboardingBucket["type"], blob: Blob) => {
+      const base = getApiBaseUrl();
+      if (!base) {
+        setVoiceError("Connect NEXT_PUBLIC_API_URL to use YarnGPT voice.");
+        return;
+      }
+
+      setVoiceError(null);
+      setVoiceProcessing(true);
+
+      try {
+        const form = new FormData();
+        form.append("audio", blob, "voice.webm");
+
+        const res = await fetch(`${base}/api/voice/transcribe`, {
+          method: "POST",
+          body: form,
+        });
+
+        const data = (await res.json()) as {
+          transcript?: string;
+          error?: { message?: string };
+        };
+
+        if (!res.ok) {
+          throw new Error(data.error?.message ?? `Voice error ${res.status}`);
+        }
+
+        const transcript = data.transcript?.trim();
+        if (!transcript) {
+          throw new Error("Could not transcribe — try again or type your rule.");
+        }
+
+        const bucket = buckets.find((b) => b.type === bucketType);
+        const merged = bucket?.naturalLanguage
+          ? `${bucket.naturalLanguage} ${transcript}`.trim()
+          : transcript;
+        const parsed = parseRuleFromText(transcript);
+
+        onUpdate(bucketType, {
+          naturalLanguage: merged,
+          ...(parsed !== null ? { percentage: parsed } : {}),
+        });
+      } catch (err) {
+        setVoiceError(err instanceof Error ? err.message : "Voice transcription failed");
+      } finally {
+        setVoiceProcessing(false);
+        setActiveVoiceType(null);
+      }
+    },
+    [buckets, onUpdate],
+  );
 
   return (
     <div className="space-y-4">
@@ -110,16 +167,12 @@ export function StepSetRules({ buckets = [], onUpdate }: StepSetRulesProps) {
                 </span>
                 <MicButton
                   compact
+                  processing={voiceProcessing && activeVoiceType === bucket.type}
+                  disabled={voiceProcessing}
                   onRecordingChange={(rec) =>
                     setActiveVoiceType(rec ? bucket.type : null)
                   }
-                  onBlobReady={() => {
-                    /* YarnGPT / Whisper will wire here */
-                    onUpdate(bucket.type, {
-                      naturalLanguage: `${bucket.naturalLanguage} [voice note recorded — transcription pending YarnGPT]`.trim(),
-                    });
-                    setActiveVoiceType(null);
-                  }}
+                  onBlobReady={(blob) => void transcribeVoice(bucket.type, blob)}
                 />
               </div>
             </div>
@@ -139,6 +192,10 @@ export function StepSetRules({ buckets = [], onUpdate }: StepSetRulesProps) {
         {totalPct > 100 && " — must be 100% or less"}
         {totalPct <= 100 && totalPct > 0 && " — remainder stays in operating balance"}
       </div>
+
+      {voiceError && (
+        <p className="text-small text-danger">{voiceError}</p>
+      )}
     </div>
   );
 }

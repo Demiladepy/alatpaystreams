@@ -10,7 +10,10 @@ import {
   createConversation,
   getConversationForMerchant,
 } from '../services/conversationStore';
-import { transcribeAudio } from '../integrations/whatsapp/mediaHandler';
+import {
+  formatVoiceUserMessage,
+  transcribeVoiceAudio,
+} from '../integrations/voice/transcribe';
 import { handleMessage } from '../services/orchestrator';
 import { checkVoiceRateLimit } from '../lib/voiceRateLimit';
 import {
@@ -144,13 +147,18 @@ router.post(
       void originalDurationMs;
 
       let transcript: string;
+      let transcriptConfidence = 0.9;
+      let voiceProvider = 'yarngpt';
       try {
-        transcript = await Promise.race([
-          transcribeAudio(req.file.buffer, mimeType),
-          new Promise<string>((_, reject) =>
+        const transcription = await Promise.race([
+          transcribeVoiceAudio(req.file.buffer, mimeType),
+          new Promise<never>((_, reject) =>
             setTimeout(() => reject(new Error('Transcription timeout')), VOICE_TIMEOUT_MS),
           ),
         ]);
+        transcript = transcription.text;
+        transcriptConfidence = transcription.confidence ?? 0.9;
+        voiceProvider = transcription.provider;
       } catch (err) {
         logger.error({ err, merchantId }, 'Voice transcription failed');
         res.status(503).json({
@@ -172,13 +180,16 @@ router.post(
       const result = await handleMessage({
         merchantId,
         conversationId: activeConversationId,
-        userMessage: transcript,
+        userMessage: formatVoiceUserMessage(transcript, {
+          provider: voiceProvider as 'yarngpt' | 'whisper',
+        }),
         channel: channel === 'WHATSAPP' ? 'WHATSAPP' : 'DASHBOARD',
       });
 
       res.json({
         transcript,
-        transcriptConfidence: 0.94,
+        transcriptConfidence,
+        voiceProvider,
         assistantResponse: result.response,
         assistantMessage: result.assistantMessage,
         conversationId: result.conversationId,
@@ -186,6 +197,15 @@ router.post(
         processingTimeMs: Date.now() - started,
       });
     } catch (error) {
+      if (error instanceof Error && error.message.includes('YARNGPT_API_KEY')) {
+        res.status(503).json({
+          error: {
+            code: 'YARNGPT_UNAVAILABLE',
+            message: 'Streams Voice requires YarnGPT — add YARNGPT_API_KEY to .env',
+          },
+        });
+        return;
+      }
       if (error instanceof Error && error.message.includes('OPENAI_API_KEY')) {
         res.status(503).json({
           error: { code: 'TRANSCRIPTION_UNAVAILABLE', message: 'Voice transcription is not configured' },

@@ -2,6 +2,7 @@ import { execSync } from 'child_process';
 import { prisma } from './db';
 import { redis } from './redis';
 import { getALATPayHealth } from '../integrations/alatpay';
+import { isYarnGptConfigured } from '../integrations/yarngpt/client';
 
 function gitSha(): string {
   try {
@@ -38,6 +39,8 @@ export async function buildHealthStatus() {
     postgres,
     anthropic: process.env.ANTHROPIC_API_KEY ? 'configured' : 'missing',
     whatsapp: process.env.WHATSAPP_ACCESS_TOKEN ? 'configured' : 'missing',
+    yarngpt: isYarnGptConfigured() ? 'configured' : 'missing',
+    voiceProvider: process.env.VOICE_PROVIDER ?? 'yarngpt',
     openai: process.env.OPENAI_API_KEY ? 'configured' : 'missing',
     version: gitSha(),
   };

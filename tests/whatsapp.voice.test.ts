@@ -8,7 +8,8 @@ describe('WhatsApp voice note pipeline', () => {
     process.env = {
       ...originalEnv,
       WHATSAPP_ACCESS_TOKEN: 'wa-token',
-      OPENAI_API_KEY: 'openai-key',
+      YARNGPT_API_KEY: 'yarngpt-key',
+      VOICE_PROVIDER: 'yarngpt',
     };
   });
 
@@ -17,7 +18,7 @@ describe('WhatsApp voice note pipeline', () => {
     nock.cleanAll();
   });
 
-  it('downloads media and transcribes via Whisper', async () => {
+  it('downloads media and transcribes via YarnGPT', async () => {
     nock('https://graph.facebook.com')
       .get('/v21.0/123')
       .reply(200, { url: 'https://cdn.example.com/voice.ogg' });
@@ -26,9 +27,9 @@ describe('WhatsApp voice note pipeline', () => {
       .get('/voice.ogg')
       .reply(200, Buffer.from('fake-audio'));
 
-    nock('https://api.openai.com')
-      .post('/v1/audio/transcriptions')
-      .reply(200, { text: 'Set aside 7.5% for VAT' });
+    nock('https://yarngpt.ai')
+      .post('/api/v1/transcribe')
+      .reply(200, { text: 'Set aside 7.5% for VAT', language: 'english' });
 
     const text = await transcribeVoiceNote('123', 'audio/ogg');
     expect(text).toBe('Set aside 7.5% for VAT');

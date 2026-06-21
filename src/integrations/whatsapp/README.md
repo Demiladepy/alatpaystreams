@@ -9,7 +9,8 @@ WHATSAPP_PHONE_NUMBER_ID=       # From Meta App → WhatsApp → API Setup
 WHATSAPP_ACCESS_TOKEN=          # System User permanent token (NOT temp)
 WHATSAPP_VERIFY_TOKEN=          # Any secret string you choose for webhook verify
 WHATSAPP_APP_SECRET=            # App secret from Meta Developer dashboard
-OPENAI_API_KEY=                 # Whisper transcription for voice notes
+YARNGPT_API_KEY=                # Streams Voice — Nigerian English, Pidgin, Yoruba, Igbo, Hausa
+# OPENAI_API_KEY=               # Optional Whisper fallback (VOICE_WHISPER_FALLBACK=true)
 REDIS_URL=redis://localhost:6379  # BullMQ background queue
 ```
 
@@ -55,7 +56,7 @@ Inbound POST /webhooks/whatsapp
   → BullMQ job (Redis)
       → find/create merchant by phone
       → find/create Conversation (WHATSAPP)
-      → voice? download + Whisper → text
+      → voice? download + YarnGPT → text
       → button reply? map to orchestrator text
       → handleMessage()
       → sendAssistantResponse() (text | buttons | list | template)
@@ -74,15 +75,15 @@ Inbound POST /webhooks/whatsapp
 ### Inbound
 - Text
 - Button / list replies (mapped to orchestrator context)
-- Voice notes (Whisper transcription)
+- Voice notes (YarnGPT / Streams Voice transcription)
 - Images — phase 2 (not implemented)
 
 ## Voice notes
 
 1. Webhook receives `audio` message with media ID
 2. Authenticated GET to Meta media URL
-3. OpenAI Whisper (`whisper-1`)
-4. Transcript passed to orchestrator with `(User sent this as a voice note)`
+3. YarnGPT transcription (English, Pidgin, Yoruba, Igbo, Hausa)
+4. Transcript passed to orchestrator with Streams Voice context
 5. Normal text/button response sent back
 
 ## Local testing with ngrok

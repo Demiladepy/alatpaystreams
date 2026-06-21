@@ -2,7 +2,11 @@ import { Queue, Worker, type ConnectionOptions } from 'bullmq';
 import { logger } from '../../lib/logger';
 import { redis } from '../../lib/redis';
 import { handleMessage } from '../../services/orchestrator';
-import { transcribeVoiceNote } from './mediaHandler';
+import { downloadWhatsAppMedia } from './mediaHandler';
+import {
+  formatVoiceUserMessage,
+  transcribeVoiceAudio,
+} from '../voice/transcribe';
 import {
   findOrCreateMerchantByPhone,
   getOrCreateWhatsAppConversation,
@@ -43,14 +47,18 @@ async function claimMessage(messageId: string): Promise<boolean> {
 
 async function resolveUserText(message: WhatsAppJobData['message']): Promise<string> {
   if (isVoiceMessage(message)) {
-    const transcript = await transcribeVoiceNote(
-      message.audio.id,
-      message.audio.mime_type,
+    const buffer = await downloadWhatsAppMedia(message.audio.id);
+    const result = await transcribeVoiceAudio(
+      buffer,
+      message.audio.mime_type ?? 'audio/ogg',
     );
-    if (!transcript) {
+    if (!result.text) {
       return '(User sent a voice note but transcription was empty.)';
     }
-    return `${transcript}\n\n(User sent this as a voice note)`;
+    return formatVoiceUserMessage(result.text, {
+      provider: result.provider,
+      language: result.language,
+    });
   }
 
   return inboundMessageToOrchestratorText(message);

@@ -9,7 +9,7 @@ export function validateEnv(): EnvCheckResult {
   const warnings: string[] = [];
   const useMock = process.env.ALATPAY_USE_MOCK === 'true';
 
-  const required = ['DATABASE_URL', 'REDIS_URL', 'ANTHROPIC_API_KEY', 'OPENAI_API_KEY'];
+  const required = ['DATABASE_URL', 'REDIS_URL', 'ANTHROPIC_API_KEY'];
 
   if (!useMock) {
     required.push('ALATPAY_API_KEY');
@@ -19,6 +19,17 @@ export function validateEnv(): EnvCheckResult {
     if (!process.env[key]?.trim()) {
       logger.error(`Missing critical env var ${key}. Refusing to start.`);
       return { ok: false, warnings };
+    }
+  }
+
+  const voiceProvider = (process.env.VOICE_PROVIDER ?? 'yarngpt').toLowerCase();
+  if (voiceProvider === 'yarngpt' && !process.env.YARNGPT_API_KEY?.trim()) {
+    if (process.env.VOICE_WHISPER_FALLBACK === 'true' && process.env.OPENAI_API_KEY?.trim()) {
+      warnings.push('YARNGPT_API_KEY missing — voice will use Whisper fallback only');
+      logger.warn('YARNGPT_API_KEY not set — using Whisper fallback for Streams Voice');
+    } else {
+      warnings.push('YARNGPT_API_KEY not set — Streams Voice disabled until configured');
+      logger.warn('YARNGPT_API_KEY not set — add key from yarngpt.ai/account for Streams Voice');
     }
   }
 
