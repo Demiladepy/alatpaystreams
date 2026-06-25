@@ -1,6 +1,7 @@
-import { Queue, Worker, type ConnectionOptions } from 'bullmq';
+import { Queue, Worker } from 'bullmq';
 import { logger } from '../../lib/logger';
 import { redis } from '../../lib/redis';
+import { getBullMqConnection } from '../../lib/redisConfig';
 import { handleMessage } from '../../services/orchestrator';
 import { downloadWhatsAppMedia } from './mediaHandler';
 import {
@@ -20,22 +21,12 @@ import type { WhatsAppJobData } from './types';
 
 const QUEUE_NAME = 'whatsapp-messages';
 
-function getConnection(): ConnectionOptions {
-  const url = new URL(process.env.REDIS_URL ?? 'redis://localhost:6379');
-  return {
-    host: url.hostname,
-    port: parseInt(url.port || '6379', 10),
-    password: url.password || undefined,
-    maxRetriesPerRequest: null,
-  };
-}
-
 let queue: Queue<WhatsAppJobData> | null = null;
 let worker: Worker<WhatsAppJobData> | null = null;
 
 export function getWhatsAppQueue(): Queue<WhatsAppJobData> {
   if (!queue) {
-    queue = new Queue<WhatsAppJobData>(QUEUE_NAME, { connection: getConnection() });
+    queue = new Queue<WhatsAppJobData>(QUEUE_NAME, { connection: getBullMqConnection() });
   }
   return queue;
 }
@@ -119,7 +110,7 @@ export function startWhatsAppWorker(): Worker<WhatsAppJobData> {
     async (job) => {
       await processWhatsAppMessage(job.data);
     },
-    { connection: getConnection() },
+    { connection: getBullMqConnection() },
   );
 
   worker.on('failed', (job, err) => {

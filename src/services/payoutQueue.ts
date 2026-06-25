@@ -1,27 +1,18 @@
-import { Queue, Worker, type ConnectionOptions } from 'bullmq';
+import { Queue, Worker } from 'bullmq';
 import Decimal from 'decimal.js';
 import { logger } from '../lib/logger';
 import { alatpayService } from '../integrations/alatpay';
+import { getBullMqConnection } from '../lib/redisConfig';
 import type { PayoutInput } from '../integrations/alatpay/types';
 
 const QUEUE_NAME = 'deferred-payouts';
-
-function getConnection(): ConnectionOptions {
-  const url = new URL(process.env.REDIS_URL ?? 'redis://localhost:6379');
-  return {
-    host: url.hostname,
-    port: parseInt(url.port || '6379', 10),
-    password: url.password || undefined,
-    maxRetriesPerRequest: null,
-  };
-}
 
 let queue: Queue<PayoutInput & { bankCode?: string }> | null = null;
 let worker: Worker<PayoutInput & { bankCode?: string }> | null = null;
 
 export function getPayoutQueue(): Queue<PayoutInput & { bankCode?: string }> {
   if (!queue) {
-    queue = new Queue(QUEUE_NAME, { connection: getConnection() });
+    queue = new Queue(QUEUE_NAME, { connection: getBullMqConnection() });
   }
   return queue;
 }
@@ -48,7 +39,7 @@ export function startPayoutWorker(): void {
         amountNaira: new Decimal(input.amountNaira.toString()),
       });
     },
-    { connection: getConnection() },
+    { connection: getBullMqConnection() },
   );
 
   worker.on('failed', (job, err) => {

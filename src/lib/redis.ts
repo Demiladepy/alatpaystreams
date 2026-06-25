@@ -1,12 +1,29 @@
-import Redis from 'ioredis';
+import type Redis from 'ioredis';
+import { createRedisClient } from './redisConfig';
 
-const redisUrl = process.env.REDIS_URL ?? 'redis://localhost:6379';
+let client: Redis | null = null;
 
-export const redis = new Redis(redisUrl);
+function getRedisClient(): Redis {
+  if (!client) {
+    client = createRedisClient();
+  }
+  return client;
+}
+
+/** Lazy Redis client — connects after env validation, not at import time. */
+export const redis: Redis = new Proxy({} as Redis, {
+  get(_target, prop) {
+    const instance = getRedisClient();
+    const value = Reflect.get(instance, prop, instance);
+    return typeof value === 'function'
+      ? (value as (...args: unknown[]) => unknown).bind(instance)
+      : value;
+  },
+});
 
 export function publishTxEvent(
   merchantId: string,
   payload: Record<string, unknown>,
 ): Promise<number> {
-  return redis.publish(`tx:${merchantId}`, JSON.stringify(payload));
+  return getRedisClient().publish(`tx:${merchantId}`, JSON.stringify(payload));
 }

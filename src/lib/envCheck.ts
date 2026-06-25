@@ -1,4 +1,5 @@
 import { logger } from './logger';
+import { normalizeRedisUrl, validateRedisUrl } from './redisConfig';
 
 interface EnvCheckResult {
   ok: boolean;
@@ -20,6 +21,38 @@ export function validateEnv(): EnvCheckResult {
       logger.error(`Missing critical env var ${key}. Refusing to start.`);
       return { ok: false, warnings };
     }
+  }
+
+  const redisUrl = normalizeRedisUrl(process.env.REDIS_URL);
+  if (
+    process.env.NODE_ENV === 'production' &&
+    (redisUrl.includes('localhost') || redisUrl.includes('127.0.0.1'))
+  ) {
+    logger.error(
+      'REDIS_URL points to localhost. Render has no local Redis — set an Upstash rediss:// URL in the Render dashboard Environment tab, then redeploy.',
+    );
+    return { ok: false, warnings };
+  }
+
+  const parsedRedis = validateRedisUrl(process.env.REDIS_URL);
+  if (!parsedRedis) {
+    logger.error(
+      'REDIS_URL is invalid. Paste only the URL from Upstash (rediss://default:TOKEN@host:6379) — not the redis-cli command.',
+    );
+    return { ok: false, warnings };
+  }
+
+  if (process.env.REDIS_URL?.includes('redis-cli')) {
+    warnings.push('REDIS_URL contained a redis-cli command — using extracted URL; fix the env var on Render');
+    logger.warn(
+      { redisHost: parsedRedis.hostname },
+      'REDIS_URL looked like a redis-cli command — extracted URL only. Update Render to paste the URL alone.',
+    );
+  } else {
+    logger.info(
+      { redisHost: parsedRedis.hostname, tls: parsedRedis.protocol === 'rediss:' },
+      'Redis configured',
+    );
   }
 
   const voiceProvider = (process.env.VOICE_PROVIDER ?? 'yarngpt').toLowerCase();
