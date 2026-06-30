@@ -12,14 +12,26 @@ export function validateEnv(): EnvCheckResult {
 
   const required = ['DATABASE_URL', 'REDIS_URL', 'ANTHROPIC_API_KEY'];
 
-  if (!useMock) {
-    required.push('ALATPAY_API_KEY');
-  }
-
   for (const key of required) {
     if (!process.env[key]?.trim()) {
       logger.error(`Missing critical env var ${key}. Refusing to start.`);
       return { ok: false, warnings };
+    }
+  }
+
+  if (!useMock) {
+    const secret =
+      process.env.ALATPAY_SECRET_KEY?.trim() || process.env.ALATPAY_API_KEY?.trim();
+    if (!secret) {
+      logger.error(
+        'Missing ALATPAY_SECRET_KEY (or ALATPAY_API_KEY). Required when ALATPAY_USE_MOCK=false.',
+      );
+      return { ok: false, warnings };
+    }
+    if (!process.env.ALATPAY_BUSINESS_ID?.trim() && !process.env.ALATPAY_MERCHANT_ID?.trim()) {
+      warnings.push(
+        'ALATPAY_BUSINESS_ID not set — payment-link and virtual-account routes need business_id in the request body',
+      );
     }
   }
 

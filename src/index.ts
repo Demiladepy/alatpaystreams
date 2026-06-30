@@ -12,6 +12,7 @@ import transactionsRouter from './routes/transactions';
 import chatRouter from './routes/chat';
 import webhooksRouter from './routes/webhooks';
 import alatpayHealthRouter from './routes/alatpayHealth';
+import alatpaySdkRouter from './routes/alatpaySdk';
 import voiceRouter from './routes/voice';
 import uptimeRouter from './routes/uptime';
 import { startWhatsAppWorker, whatsappWebhookRouter } from './integrations/whatsapp';
@@ -94,6 +95,7 @@ app.use('/api/voice', voiceRouter);
 app.use('/api/uptime', uptimeRouter);
 app.use('/api/webhooks', webhooksRouter);
 app.use('/api/alatpay', alatpayHealthRouter);
+app.use('/api/alatpay', alatpaySdkRouter);
 
 app.use((err: Error, req: Request, res: Response, _next: NextFunction) => {
   logger.error(

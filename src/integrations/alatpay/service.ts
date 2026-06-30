@@ -1,5 +1,6 @@
 import Decimal from 'decimal.js';
 import { logger } from '../../lib/logger';
+import { resolveOfficialBaseUrl, resolveSecretKey } from './config';
 import { ALATPayHttpClient } from './client';
 import { cachePayout, getCachedPayout } from './redisStore';
 import { CircuitBreaker } from './retry';
@@ -38,7 +39,7 @@ function resolveBaseUrl(): string {
   if (useMockMode()) {
     return process.env.ALATPAY_BASE_URL ?? 'http://localhost:5500';
   }
-  return process.env.ALATPAY_BASE_URL ?? '';
+  return resolveOfficialBaseUrl();
 }
 
 function normalizePayoutStatus(raw: string): PayoutStatus {
@@ -89,7 +90,7 @@ function mapPayoutResponse(raw: RawPayoutResponse): PayoutResult {
 function createClient(): ALATPayHttpClient {
   return new ALATPayHttpClient({
     baseUrl: resolveBaseUrl(),
-    apiKey: process.env.ALATPAY_API_KEY,
+    apiKey: resolveSecretKey(),
     timeoutMs: TIMEOUT_MS,
     useMock: useMockMode(),
   });
@@ -186,28 +187,79 @@ export const alatpayService: ALATPayService = {
 
   parseWebhook(payload: unknown): ParsedWebhook {
     const body = payload as MockWebhookPayload;
-    if (!body?.event || !body?.data?.transactionId) {
+    if (body?.event && body?.data?.transactionId) {
+      return {
+        eventType: normalizeWebhookEvent(body.event),
+        transactionId: body.data.transactionId,
+        merchantAccountId: body.data.merchantAccountId,
+        amountNaira: new Decimal(body.data.amountNaira),
+        customerName: body.data.customerName,
+        customerPhone: body.data.customerPhone,
+        channel: normalizeChannel(body.data.channel),
+        reference: body.data.reference,
+        receivedAt: body.timestamp ? new Date(body.timestamp) : new Date(),
+      };
+    }
+
+    const record = payload as Record<string, unknown>;
+    const data = (record.data ?? record) as Record<string, unknown>;
+    const eventRaw = String(record.event ?? record.eventType ?? record.type ?? '');
+    const transactionId = String(
+      data.transactionId ?? data.transaction_id ?? data.id ?? '',
+    );
+    const merchantAccountId = String(
+      data.merchantAccountId ??
+        data.merchant_account_id ??
+        data.merchantId ??
+        data.merchant_id ??
+        data.businessId ??
+        data.business_id ??
+        '',
+    );
+    const amountRaw =
+      data.amountNaira ?? data.amount_naira ?? data.amount ?? data.totalAmount;
+
+    if (!transactionId || amountRaw === undefined) {
       throw new Error('Invalid ALATPay webhook payload');
     }
 
     return {
-      eventType: body.event,
-      transactionId: body.data.transactionId,
-      merchantAccountId: body.data.merchantAccountId,
-      amountNaira: new Decimal(body.data.amountNaira),
-      customerName: body.data.customerName,
-      customerPhone: body.data.customerPhone,
-      channel: normalizeChannel(body.data.channel),
-      reference: body.data.reference,
-      receivedAt: body.timestamp ? new Date(body.timestamp) : new Date(),
+      eventType: normalizeWebhookEvent(eventRaw),
+      transactionId,
+      merchantAccountId,
+      amountNaira: new Decimal(Number(amountRaw)),
+      customerName: String(
+        data.customerName ?? data.customer_name ?? data.customerEmail ?? 'Customer',
+      ),
+      customerPhone: (data.customerPhone ?? data.customer_phone) as string | undefined,
+      channel: normalizeChannel(String(data.channel ?? data.paymentChannel ?? 'unknown')),
+      reference: String(data.reference ?? data.orderId ?? data.order_id ?? transactionId),
+      receivedAt: record.timestamp
+        ? new Date(String(record.timestamp))
+        : new Date(),
     };
   },
 };
 
+function normalizeWebhookEvent(event: string): string {
+  const lower = event.toLowerCase();
+  if (
+    lower === 'payment.success' ||
+    lower === 'payment_success' ||
+    lower === 'transaction.success' ||
+    lower === 'successful'
+  ) {
+    return 'transaction.received';
+  }
+  return event;
+}
+
 export function getALATPayHealth(): ALATPayHealth {
   const circuit = payoutCircuit.getState();
+  const mock = useMockMode();
   return {
-    mode: useMockMode() ? 'mock' : 'production',
+    mode: mock ? 'mock' : 'production',
+    officialSdk: !mock,
     circuitOpen: circuit.circuitOpen,
     circuitOpenUntil:
       circuit.circuitOpenUntil > Date.now()

@@ -50,6 +50,8 @@ export interface ALATPayService {
 
 export interface ALATPayHealth {
   mode: 'mock' | 'production';
+  /** True when production uses apibox.alatpay.ng (official SDK contract). */
+  officialSdk: boolean;
   circuitOpen: boolean;
   circuitOpenUntil: string | null;
   consecutiveFailures: number;

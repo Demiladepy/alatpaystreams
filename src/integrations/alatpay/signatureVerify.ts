@@ -1,8 +1,9 @@
 import crypto from 'crypto';
+import { resolveWebhookSecret } from './config';
 import type { MockWebhookPayload } from './types';
 
 function getSecret(): string {
-  return process.env.ALATPAY_WEBHOOK_SECRET ?? '';
+  return resolveWebhookSecret();
 }
 
 function hmacHex(payload: string): string {

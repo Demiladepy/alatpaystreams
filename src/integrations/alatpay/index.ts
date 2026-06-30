@@ -20,3 +20,16 @@ export {
   extractSignatureFromHeaders,
   extractEmbeddedSignature,
 } from './signatureVerify';
+
+export {
+  getALATPayCredentials,
+  isOfficialSdkMode,
+  resolveBusinessId,
+  resolveSecretKey,
+} from './config';
+
+export {
+  ALATPayOfficialClient,
+  getOfficialALATPayClient,
+  resetOfficialClientForTests,
+} from './officialSdkClient';
