@@ -43,7 +43,7 @@ export const mockBuckets: Bucket[] = [
   {
     id: "bucket_supplier",
     merchantId: MOCK_MERCHANT_ID,
-    name: "Supplier — Mama Nkechi",
+    name: "Accounts Payable (Mama Nkechi)",
     type: "SUPPLIER",
     rule: { kind: "FIXED", value: 80000 },
     priority: 3,

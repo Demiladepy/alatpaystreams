@@ -2,7 +2,7 @@
 
 import { useCallback, useMemo, useState } from "react";
 import Link from "next/link";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
 import { StepPickTypes } from "@/components/onboarding/StepPickTypes";
 import { StepSetRules } from "@/components/onboarding/StepSetRules";
 import { StepConfirm } from "@/components/onboarding/StepConfirm";
@@ -83,7 +83,7 @@ export default function OnboardingPage() {
           ← Back to home
         </Link>
         <h1 className="mt-4 text-2xl font-semibold text-ink-primary">
-          Set up your buckets
+          Set up your ledgers
         </h1>
         <p className="mt-1 text-small text-ink-tertiary">
           Three quick steps to route your income automatically.
@@ -153,7 +153,6 @@ export default function OnboardingPage() {
         {currentStep < steps.length - 1 ? (
           <Button onClick={goNext} disabled={!canProceed} className="w-full sm:w-auto">
             Next
-            <ChevronRight className="h-4 w-4" />
           </Button>
         ) : (
           <Button asChild className="w-full sm:w-auto">

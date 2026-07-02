@@ -32,7 +32,7 @@ export default function OffersClient() {
 
       {apiUnreachable && (
         <div className="rounded-md border border-warning/30 bg-warning-subtle px-4 py-3 text-small text-ink-secondary">
-          Backend unavailable — start the API on port 3000 to load live offers.
+          Backend unavailable, start the API on port 3000 to load live offers.
         </div>
       )}
 

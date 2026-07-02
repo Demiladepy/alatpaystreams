@@ -117,7 +117,7 @@ export function UptimePredictor() {
       <Dialog open={!!selected} onOpenChange={() => setSelected(null)}>
         <DialogContent className="rounded-md border-border">
           <DialogHeader>
-            <DialogTitle>{selected?.bankName} — 24h success rate</DialogTitle>
+            <DialogTitle>{selected?.bankName} (24h success rate)</DialogTitle>
           </DialogHeader>
           <div className="h-48">
             <ResponsiveContainer width="100%" height="100%">
@@ -128,8 +128,8 @@ export function UptimePredictor() {
                 <Area
                   type="monotone"
                   dataKey="successRate"
-                  stroke="#635BFF"
-                  fill="#635BFF22"
+                  stroke="#2563EB"
+                  fill="#2563EB22"
                 />
               </AreaChart>
             </ResponsiveContainer>

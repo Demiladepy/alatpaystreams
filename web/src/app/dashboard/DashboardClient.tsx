@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { ArrowRight, Settings } from "lucide-react";
+import { Settings } from "lucide-react";
 import { BucketGrid } from "@/components/BucketGrid";
 import { SplitFlow } from "@/components/SplitFlow";
 import { DemoBurstButton } from "@/components/DemoBurstButton";
@@ -29,12 +29,12 @@ export default function DashboardClient() {
 
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <p className="text-small text-ink-tertiary">Total across buckets</p>
+          <p className="text-small text-ink-tertiary">Total across ledgers</p>
           <div className="mt-1">
             {totalBalance !== undefined ? (
               <Naira amount={totalBalance} size="xl" />
             ) : (
-              <span className="text-2xl text-ink-quaternary">—</span>
+              <span className="text-2xl text-ink-quaternary">-</span>
             )}
           </div>
         </div>
@@ -45,7 +45,7 @@ export default function DashboardClient() {
           <Button variant="secondary" asChild>
             <Link href="/onboarding">
               <Settings className="h-4 w-4" />
-              Configure buckets
+              Configure ledgers
             </Link>
           </Button>
         </div>
@@ -55,13 +55,12 @@ export default function DashboardClient() {
 
       <section>
         <div className="mb-4 flex items-center justify-between">
-          <h2 className="text-lg font-medium text-ink-primary">Your buckets</h2>
+          <h2 className="text-lg font-medium text-ink-primary">Your ledgers</h2>
           <Link
             href="/dashboard/activity"
             className="inline-flex items-center gap-1 text-small text-ink-tertiary hover:text-ink-secondary"
           >
             View activity
-            <ArrowRight className="h-3.5 w-3.5" />
           </Link>
         </div>
         <BucketGrid buckets={buckets ?? []} isLoading={isLoading} />

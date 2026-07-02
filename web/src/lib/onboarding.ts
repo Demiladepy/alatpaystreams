@@ -42,7 +42,7 @@ export const BUCKET_OPTIONS: BucketOption[] = [
     type: "CUSTOM",
     label: "Custom",
     labelLocal: "Miiran",
-    description: "Any other pot — rent, staff, equipment.",
+    description: "Any other ledger: rent, staff, equipment.",
   },
 ];
 

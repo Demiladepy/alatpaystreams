@@ -5,11 +5,55 @@
 body {
   color: #0a0a0a;
   background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
-  font-family: var(--font-inter), Inter, system-ui, sans-serif;
+  font-family: var(--font-inter), "Inter", system-ui, sans-serif;
   font-size: 14px;
   line-height: 20px;
+  font-feature-settings: "cv11", "ss01";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(99, 91, 255, 0.14);
+}
+
+/* Premium range slider (used in the landing playground) */
+input[type="range"].slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 3px;
+  border-radius: 999px;
+  background: #e4e4e7;
+  outline: none;
+}
+input[type="range"].slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1.5px solid #635bff;
+  box-shadow: 0 1px 2px rgba(9, 9, 11, 0.12), 0 2px 6px rgba(99, 91, 255, 0.18);
+  cursor: grab;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+input[type="range"].slider::-webkit-slider-thumb:hover {
+  transform: scale(1.12);
+  box-shadow: 0 1px 2px rgba(9, 9, 11, 0.12), 0 3px 10px rgba(99, 91, 255, 0.3);
+}
+input[type="range"].slider::-webkit-slider-thumb:active {
+  cursor: grabbing;
+  transform: scale(1.05);
+}
+input[type="range"].slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1.5px solid #635bff;
+  box-shadow: 0 1px 2px rgba(9, 9, 11, 0.12), 0 2px 6px rgba(99, 91, 255, 0.18);
+  cursor: grab;
 }
 
 @layer utilities {
@@ -20,4 +64,32 @@ body {
   .tabular {
     font-variant-numeric: tabular-nums;
   }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-glow-pulse {
+  animation: glowPulse 2s infinite;
 }

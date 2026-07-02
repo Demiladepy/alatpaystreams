@@ -23,9 +23,9 @@ const config: Config = {
           quaternary: "#A3A3A3",
         },
         accent: {
-          DEFAULT: "#635BFF",
-          hover: "#5851E0",
-          subtle: "#F3F2FF",
+          DEFAULT: "#2563EB",
+          hover: "#1D4ED8",
+          subtle: "#EFF6FF",
         },
         success: {
           DEFAULT: "#0E9F6E",
@@ -42,6 +42,8 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"],
+        display: ["var(--font-space-grotesk)", "Space Grotesk", "sans-serif"],
+        mono: ["var(--font-ibm-plex-mono)", "IBM Plex Mono", "monospace"],
       },
       fontSize: {
         micro: ["11px", { lineHeight: "16px", letterSpacing: "0.02em" }],

@@ -62,8 +62,16 @@ export function Header({ merchant }: HeaderProps) {
       <header className="sticky top-0 z-40 h-14 border-b border-border bg-white">
         <div className="mx-auto flex h-14 max-w-[1200px] items-center justify-between px-4 sm:px-8">
           <div className="flex items-center gap-8">
-            <Link href="/dashboard" className="text-body font-medium text-ink-primary">
-              ALATPay Streams
+            <Link href="/dashboard" className="flex items-center gap-2.5">
+              <span className="flex h-[24px] w-[24px] items-center justify-center rounded-[6px] bg-accent text-white">
+                <svg className="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M2 12c5 0 5-7 10-7s5 7 10 7" />
+                  <path d="M2 12c5 0 5 7 10 7s5-7 10-7" />
+                </svg>
+              </span>
+              <span className="font-display text-[15px] font-semibold tracking-tight text-ink-primary">
+                ALATPay <span className="text-accent">Streams</span>
+              </span>
             </Link>
             <nav className="hidden items-center gap-1 sm:flex">
               {navLinks.map((link) => (

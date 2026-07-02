@@ -1,13 +1,8 @@
 "use client";
 
-import { useCallback, useState } from "react";
-import { Mic, Sparkles } from "lucide-react";
 import type { OnboardingBucket } from "@/lib/onboarding";
 import { parseRuleFromText } from "@/lib/onboarding";
 import { getBucketConfig } from "@/lib/buckets";
-import { getApiBaseUrl } from "@/lib/api";
-import { MicButton } from "@/components/MicButton";
-import { Pill } from "@/components/ui/Pill";
 import { cn } from "@/lib/utils";
 
 interface StepSetRulesProps {
@@ -16,64 +11,7 @@ interface StepSetRulesProps {
 }
 
 export function StepSetRules({ buckets = [], onUpdate }: StepSetRulesProps) {
-  const [activeVoiceType, setActiveVoiceType] = useState<string | null>(null);
-  const [voiceProcessing, setVoiceProcessing] = useState(false);
-  const [voiceError, setVoiceError] = useState<string | null>(null);
   const totalPct = buckets.reduce((s, b) => s + b.percentage, 0);
-
-  const transcribeVoice = useCallback(
-    async (bucketType: OnboardingBucket["type"], blob: Blob) => {
-      const base = getApiBaseUrl();
-      if (!base) {
-        setVoiceError("Connect NEXT_PUBLIC_API_URL to use YarnGPT voice.");
-        return;
-      }
-
-      setVoiceError(null);
-      setVoiceProcessing(true);
-
-      try {
-        const form = new FormData();
-        form.append("audio", blob, "voice.webm");
-
-        const res = await fetch(`${base}/api/voice/transcribe`, {
-          method: "POST",
-          body: form,
-        });
-
-        const data = (await res.json()) as {
-          transcript?: string;
-          error?: { message?: string };
-        };
-
-        if (!res.ok) {
-          throw new Error(data.error?.message ?? `Voice error ${res.status}`);
-        }
-
-        const transcript = data.transcript?.trim();
-        if (!transcript) {
-          throw new Error("Could not transcribe — try again or type your rule.");
-        }
-
-        const bucket = buckets.find((b) => b.type === bucketType);
-        const merged = bucket?.naturalLanguage
-          ? `${bucket.naturalLanguage} ${transcript}`.trim()
-          : transcript;
-        const parsed = parseRuleFromText(transcript);
-
-        onUpdate(bucketType, {
-          naturalLanguage: merged,
-          ...(parsed !== null ? { percentage: parsed } : {}),
-        });
-      } catch (err) {
-        setVoiceError(err instanceof Error ? err.message : "Voice transcription failed");
-      } finally {
-        setVoiceProcessing(false);
-        setActiveVoiceType(null);
-      }
-    },
-    [buckets, onUpdate],
-  );
 
   return (
     <div className="space-y-4">
@@ -82,19 +20,13 @@ export function StepSetRules({ buckets = [], onUpdate }: StepSetRulesProps) {
           <div>
             <h2 className="text-xl font-medium text-ink-primary">Set your rules</h2>
             <p className="mt-2 text-small text-ink-tertiary">
-              Type or speak naturally — English, Pidgin, or Yoruba. Local LLM voice
-              (YarnGPT) will parse rules for you.
+              Define split rules for each sub-account ledger. Enter percentage limits or write a plain text description of the rule.
             </p>
           </div>
-          <Pill variant="accent" className="shrink-0 gap-1 self-start">
-            <Sparkles className="h-3 w-3" />
-            Voice · YarnGPT ready
-          </Pill>
         </div>
 
         <div className="mt-4 rounded-md border border-accent/25 bg-accent-subtle/40 px-3 py-2 text-mini text-ink-secondary">
-          Try: &ldquo;Set aside seven and a half percent for VAT&rdquo; or &ldquo;Keep 15%
-          for savings&rdquo;
+          Try: &ldquo;Keep 15% for capital reserves&rdquo; or &ldquo;Split 7.5% to tax settled&rdquo;
         </div>
       </div>
 
@@ -118,7 +50,7 @@ export function StepSetRules({ buckets = [], onUpdate }: StepSetRulesProps) {
                   onChange={(e) => onUpdate(bucket.type, { name: e.target.value })}
                   className="w-full bg-transparent text-small font-medium text-ink-primary outline-none"
                 />
-                <p className="text-micro text-ink-tertiary">{config.label} bucket</p>
+                <p className="text-micro text-ink-tertiary">{config.label} ledger</p>
               </div>
               <div className="flex items-center gap-1">
                 <input
@@ -138,14 +70,7 @@ export function StepSetRules({ buckets = [], onUpdate }: StepSetRulesProps) {
               </div>
             </div>
 
-            <div
-              className={cn(
-                "mt-4 rounded-md border transition-colors",
-                activeVoiceType === bucket.type
-                  ? "border-accent/40 ring-1 ring-accent/10"
-                  : "border-border",
-              )}
-            >
+            <div className="mt-4 rounded-md border border-border transition-colors focus-within:border-accent/40">
               <textarea
                 value={bucket.naturalLanguage}
                 onChange={(e) => {
@@ -156,25 +81,10 @@ export function StepSetRules({ buckets = [], onUpdate }: StepSetRulesProps) {
                     ...(parsed !== null ? { percentage: parsed } : {}),
                   });
                 }}
-                placeholder="Describe this rule in your words…"
+                placeholder="Describe this rule in plain text description..."
                 rows={2}
                 className="block w-full resize-none bg-transparent px-3 py-2.5 text-small text-ink-primary placeholder:text-ink-quaternary focus:outline-none"
               />
-              <div className="flex items-center justify-between border-t border-border px-2 py-1.5">
-                <span className="pl-1 text-micro text-ink-quaternary">
-                  <Mic className="mr-1 inline h-3 w-3" />
-                  Or use voice
-                </span>
-                <MicButton
-                  compact
-                  processing={voiceProcessing && activeVoiceType === bucket.type}
-                  disabled={voiceProcessing}
-                  onRecordingChange={(rec) =>
-                    setActiveVoiceType(rec ? bucket.type : null)
-                  }
-                  onBlobReady={(blob) => void transcribeVoice(bucket.type, blob)}
-                />
-              </div>
             </div>
           </div>
         );
@@ -189,13 +99,9 @@ export function StepSetRules({ buckets = [], onUpdate }: StepSetRulesProps) {
         )}
       >
         Total allocation: <span className="tabular font-medium">{totalPct.toFixed(1)}%</span>
-        {totalPct > 100 && " — must be 100% or less"}
-        {totalPct <= 100 && totalPct > 0 && " — remainder stays in operating balance"}
+        {totalPct > 100 && " (must be 100% or less)"}
+        {totalPct <= 100 && totalPct > 0 && " (remainder stays in primary operating ledger)"}
       </div>
-
-      {voiceError && (
-        <p className="text-small text-danger">{voiceError}</p>
-      )}
     </div>
   );
 }

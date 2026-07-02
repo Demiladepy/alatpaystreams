@@ -29,7 +29,7 @@ export function DemoBurstButton({
       const data = await res.json();
       setStatus(data.message ?? "Burst started");
     } catch {
-      setStatus("Could not reach mock ALATPay — is it running on :5500?");
+      setStatus("Could not reach mock ALATPay. Is it running on :5500?");
     } finally {
       setLoading(false);
     }

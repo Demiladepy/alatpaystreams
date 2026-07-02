@@ -142,10 +142,10 @@ export function ChatPanel({ merchantId = MERCHANT_ID }: { merchantId?: string })
       id: "welcome",
       role: "assistant",
       content:
-        "Hi Funke — I'm your Streams co-pilot. Ask about sales, buckets, or working capital.",
+        "Hi Funke, I'm your Streams co-pilot. Ask about sales, ledgers, or working capital.",
       response: {
         type: "text",
-        body: "Hi Funke — I'm your Streams co-pilot. Ask about sales, buckets, or working capital.",
+        body: "Hi Funke, I'm your Streams co-pilot. Ask about sales, ledgers, or working capital.",
       },
     },
   ]);

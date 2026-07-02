@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { Header } from "@/components/Header";
-import { ChatPanel } from "@/components/ChatPanel";
 import { useMerchant } from "@/lib/api";
 import { MOCK_MERCHANT_ID } from "@/lib/mocks";
 
@@ -12,8 +11,6 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   const { data: merchant } = useMerchant(MOCK_MERCHANT_ID);
 
   const isLanding = pathname === "/";
-  const showChat =
-    pathname.startsWith("/dashboard") || pathname === "/offers";
 
   if (isLanding) {
     return <>{children}</>;
@@ -28,11 +25,10 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.15 }}
-          className={`mx-auto max-w-[1200px] px-4 py-8 sm:px-8 ${showChat ? "lg:pr-[432px]" : ""}`}
+          className="mx-auto max-w-[1200px] px-4 py-8 sm:px-8"
         >
           {children}
         </motion.main>
-        {showChat && <ChatPanel merchantId={MOCK_MERCHANT_ID} />}
       </div>
     </div>
   );

@@ -155,7 +155,7 @@ export function MicButton({
       maxTimeoutRef.current = setTimeout(() => stopRecording(false), MAX_RECORDING_MS);
     } catch {
       setState("error");
-      setErrorMsg("Microphone access denied — check browser settings.");
+      setErrorMsg("Microphone access denied: check browser settings.");
       cleanupStream();
     }
   }, [cleanupStream, disabled, onRecordingChange, state, stopRecording]);

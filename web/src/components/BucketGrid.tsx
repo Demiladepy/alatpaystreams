@@ -54,16 +54,16 @@ export function BucketGrid({ buckets, isLoading }: BucketGridProps) {
           <div className="flex h-10 w-10 items-center justify-center rounded-md border border-border bg-surface">
             <Plus className="h-5 w-5" />
           </div>
-          <span className="text-small font-medium">Add bucket</span>
+          <span className="text-small font-medium">Add ledger</span>
         </button>
       </div>
 
       <Dialog open={addOpen} onOpenChange={setAddOpen}>
         <DialogContent className="rounded-md border-border">
           <DialogHeader>
-            <DialogTitle>Add a bucket</DialogTitle>
+            <DialogTitle>Add a ledger</DialogTitle>
             <DialogDescription>
-              Bucket creation will be available after onboarding.
+              Ledger creation will be available after onboarding.
             </DialogDescription>
           </DialogHeader>
         </DialogContent>

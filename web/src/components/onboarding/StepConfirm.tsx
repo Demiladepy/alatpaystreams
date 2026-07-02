@@ -50,11 +50,11 @@ export function StepConfirm({ buckets }: StepConfirmProps) {
       <div className="mt-6 rounded-md border-2 border-accent/30 bg-accent-subtle/30 px-4 py-3 text-center">
         <p className="text-small text-ink-secondary">
           <span className="font-medium text-ink-primary">{totalPct.toFixed(1)}%</span> routed
-          to buckets ·{" "}
+          to ledgers ·{" "}
           <span className="font-medium text-ink-primary">
             {Math.max(0, 100 - totalPct).toFixed(1)}%
           </span>{" "}
-          operating
+          operating float
         </p>
       </div>
     </div>

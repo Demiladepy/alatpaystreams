@@ -14,10 +14,10 @@ interface StepPickTypesProps {
 export function StepPickTypes({ selected = [], onToggle }: StepPickTypesProps) {
   return (
     <div className="rounded-md border border-border bg-white p-5 sm:p-8">
-      <h2 className="text-xl font-medium text-ink-primary">Pick bucket types</h2>
+      <h2 className="text-xl font-medium text-ink-primary">Pick ledger types</h2>
       <p className="mt-2 text-small text-ink-tertiary">
-        Tap to select the pots you want. You can pick more than one — most merchants
-        start with Tax, Savings, and Operating.
+        Tap to select the sub-accounts you want. You can pick more than one, though most merchants
+        start with Tax Settlement, Capital Reserve, and Operating Float.
       </p>
 
       <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -63,7 +63,7 @@ export function StepPickTypes({ selected = [], onToggle }: StepPickTypesProps) {
 
       {selected.length > 0 && (
         <p className="mt-4 text-mini text-ink-secondary">
-          {selected.length} bucket{selected.length === 1 ? "" : "s"} selected
+          {selected.length} ledger{selected.length === 1 ? "" : "s"} selected
         </p>
       )}
     </div>

@@ -16,8 +16,8 @@ export function MockModeBanner() {
         <p className="font-medium text-ink-primary">Demo data mode</p>
         <p className="mt-0.5 text-ink-tertiary">
           {noApi
-            ? "NEXT_PUBLIC_API_URL is not set — showing mock Funke data."
-            : "API unreachable — fell back to mock data. Start the backend on :3000."}
+            ? "NEXT_PUBLIC_API_URL is not set, showing mock Funke data."
+            : "API unreachable, fell back to mock data. Start the backend on :3000."}
         </p>
       </div>
     </div>

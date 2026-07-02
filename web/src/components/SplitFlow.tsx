@@ -575,7 +575,7 @@ export function SplitFlow({ merchantId, buckets }: SplitFlowProps) {
                       </div>
                       {split.bucketId && (
                         <p className="mt-1 text-mini text-ink-tertiary">
-                          → <Naira amount={balance} size="sm" subdued className="inline" />
+                          balance: <Naira amount={balance} size="sm" subdued className="inline" />
                         </p>
                       )}
                     </motion.div>
