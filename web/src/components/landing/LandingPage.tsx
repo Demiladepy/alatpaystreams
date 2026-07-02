@@ -799,10 +799,10 @@ export function LandingPage() {
               </span>
             </div>
             <p className="text-small text-zinc-500 max-w-sm leading-[1.7]">
-              Programmable settlement routing and instant ledger reconciliation for modern African merchants and platforms. Underwritten by Wema Bank.
+              Programmable settlement routing and instant ledger reconciliation for modern African merchants and platforms.
             </p>
             <span className="font-mono text-micro text-zinc-400 mt-2">
-              © 2026 ALATPay. All rights reserved.
+              © 2026 ALATPay Streams. All rights reserved.
             </span>
           </div>
 
