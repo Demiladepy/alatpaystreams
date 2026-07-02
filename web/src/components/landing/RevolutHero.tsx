@@ -287,7 +287,7 @@ export function RevolutHero({ operatingFloat, delta }: RevolutHeroProps) {
             href="/onboarding"
             className="mt-7 inline-flex items-center h-12 px-8 text-[15px] font-semibold text-white bg-zinc-950 hover:bg-zinc-900 rounded-full transition-all hover:scale-[1.02] active:scale-[0.98] shadow-[0_12px_32px_-12px_rgba(9,9,11,0.6)]"
           >
-            Get started for free
+            Get Started
           </Link>
         </div>
 

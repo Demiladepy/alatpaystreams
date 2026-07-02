@@ -81,7 +81,7 @@ export function HeroZoom() {
               <Link href="/dashboard">Dashboard</Link>
             </Button>
             <Button size="sm" asChild className="bg-[#635BFF] hover:bg-[#5851E0] text-white font-semibold rounded-full px-5 active:scale-[0.98] transition-all duration-200">
-              <Link href="/onboarding">Request access</Link>
+              <Link href="/onboarding">Get Started</Link>
             </Button>
           </div>
         </div>
@@ -103,7 +103,7 @@ export function HeroZoom() {
               href="/onboarding"
               className="inline-flex items-center gap-2 h-12 px-8 text-[15px] font-semibold text-white bg-zinc-950 hover:bg-zinc-800 rounded-full transition-colors group"
             >
-              Get started for free
+              Get Started
               <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
             </Link>
             <div className="hidden sm:inline-flex items-center gap-2.5 h-12 bg-white border border-zinc-200 rounded-full px-6 font-mono text-[12.5px] text-zinc-500">

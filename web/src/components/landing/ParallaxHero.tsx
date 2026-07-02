@@ -91,7 +91,7 @@ export function ParallaxHero() {
               <Link href="/dashboard">Dashboard</Link>
             </Button>
             <Button size="sm" asChild className="bg-[#635BFF] hover:bg-[#5851E0] text-white font-semibold rounded-full px-5 active:scale-[0.98] transition-all duration-200">
-              <Link href="/onboarding">Request access</Link>
+              <Link href="/onboarding">Get Started</Link>
             </Button>
           </div>
         </nav>
@@ -109,7 +109,7 @@ export function ParallaxHero() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 w-full sm:w-auto">
             <Button size="lg" asChild className="bg-[#635BFF] hover:bg-[#5851E0] text-white font-medium rounded-lg px-8 shadow-lg shadow-[#635BFF]/10 border-0 active:scale-[0.98] transition-all duration-200 w-full sm:w-auto">
-              <Link href="/onboarding">Get started for free</Link>
+              <Link href="/onboarding">Get Started</Link>
             </Button>
             <div className="flex items-center justify-center gap-2.5 bg-zinc-100/80 border border-zinc-200 rounded-lg px-5 py-3 font-mono text-small text-zinc-700 shadow-sm w-full sm:w-auto">
               <span className="text-[#635BFF] font-semibold">$</span>

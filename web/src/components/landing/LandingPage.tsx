@@ -216,7 +216,7 @@ export function LandingPage() {
                 ? "bg-blue-600 hover:bg-blue-700 text-white"
                 : "bg-white hover:bg-zinc-100 text-zinc-950"
             }`}>
-              <Link href="/onboarding">Request access</Link>
+              <Link href="/onboarding">Get Started</Link>
             </Button>
           </div>
         </div>
