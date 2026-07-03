@@ -14,7 +14,8 @@ on:
     paths:
       - 'web/**'
       - '.github/workflows/deploy-frontend.yml'
-  workflow_dispatch:
+  workflow_dispatch: # manual re-run from Actions tab
+
 
 concurrency:
   group: vercel-frontend-production
