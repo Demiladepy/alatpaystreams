@@ -34,6 +34,7 @@ void seedUptimeMonitor();
 
 const allowedOrigins = [
   'http://localhost:3001',
+  'https://alatpaystreams.vercel.app',
   process.env.FRONTEND_URL,
 ].filter(Boolean) as string[];
 
