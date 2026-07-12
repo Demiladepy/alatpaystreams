@@ -7,6 +7,7 @@ import type { AssistantResponse, ChatApiResult, ChatMessage } from "@/types/chat
 import { Button } from "@/components/ui/button";
 import { MicButton, RecordingDots } from "@/components/MicButton";
 import { StatusDot } from "@/components/ui/StatusDot";
+import { ChatText } from "@/components/ChatText";
 import { cn } from "@/lib/utils";
 
 const SUGGESTED_PROMPTS = [
@@ -31,7 +32,7 @@ function AssistantContent({
   if (response.type === "buttons") {
     return (
       <div className="space-y-3">
-        <p className="whitespace-pre-wrap text-small leading-relaxed">{response.body}</p>
+        <ChatText text={response.body} />
         <div className="flex flex-wrap gap-2">
           {response.buttons.map((btn) => (
             <Button
@@ -53,7 +54,7 @@ function AssistantContent({
   if (response.type === "list") {
     return (
       <div className="space-y-3">
-        <p className="whitespace-pre-wrap text-small leading-relaxed">{response.body}</p>
+        <ChatText text={response.body} />
         <div className="rounded-md border border-border bg-surface p-3">
           <p className="mb-2 text-micro font-medium uppercase tracking-wider text-ink-tertiary">
             {response.buttonText}
@@ -81,7 +82,7 @@ function AssistantContent({
     );
   }
 
-  return <p className="whitespace-pre-wrap text-small leading-relaxed">{response.body}</p>;
+  return <ChatText text={response.body} />;
 }
 
 function UserMessage({ msg }: { msg: ChatMessage }) {
@@ -127,9 +128,7 @@ function AssistantMessage({
             disabled={disabled}
           />
         ) : (
-          <p className="whitespace-pre-wrap text-small leading-relaxed text-ink-secondary">
-            {msg.content}
-          </p>
+          <ChatText text={msg.content} />
         )}
       </div>
     </div>

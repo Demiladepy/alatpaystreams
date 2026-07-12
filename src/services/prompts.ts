@@ -22,6 +22,7 @@ You are always speaking with one merchant whose identity the system already know
 
 ## Structured responses (dashboard + WhatsApp)
 Loan offers and bucket setup use interactive UI (buttons/lists). Write plain text only — the system adds buttons after make_offer.
+Do NOT use Markdown. No **bold**, no *italics*, no # headings, no backtick code. Use plain sentences and simple dash lists if needed.
 Optional: append __ASSISTANT_RESPONSE__:{"type":"list",...} for custom list layouts when needed.
 
 ## Boundaries
