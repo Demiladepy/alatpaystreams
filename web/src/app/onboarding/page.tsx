@@ -2,7 +2,9 @@
 
 import { useCallback, useMemo, useState } from "react";
 import Link from "next/link";
-import { ChevronLeft } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { ChevronLeft, Loader2 } from "lucide-react";
+import { createBucket, MERCHANT_ID } from "@/lib/api";
 import { StepPickTypes } from "@/components/onboarding/StepPickTypes";
 import { StepSetRules } from "@/components/onboarding/StepSetRules";
 import { StepConfirm } from "@/components/onboarding/StepConfirm";
@@ -15,9 +17,12 @@ import type { BucketType } from "@/types";
 import { cn } from "@/lib/utils";
 
 export default function OnboardingPage() {
+  const router = useRouter();
   const [currentStep, setCurrentStep] = useState(0);
   const [selectedTypes, setSelectedTypes] = useState<BucketType[]>([]);
   const [buckets, setBuckets] = useState<OnboardingBucket[]>([]);
+  const [saving, setSaving] = useState(false);
+  const [saveError, setSaveError] = useState<string | null>(null);
 
   const toggleType = useCallback((type: BucketType) => {
     setSelectedTypes((prev) =>
@@ -65,6 +70,29 @@ export default function OnboardingPage() {
   function goNext() {
     if (currentStep === 0) syncBucketsFromSelection();
     setCurrentStep((s) => Math.min(2, s + 1));
+  }
+
+  async function finishSetup() {
+    setSaving(true);
+    setSaveError(null);
+
+    try {
+      for (let i = 0; i < buckets.length; i++) {
+        const bucket = buckets[i];
+        await createBucket({
+          merchantId: MERCHANT_ID,
+          name: bucket.name.trim(),
+          type: bucket.type,
+          rule: { kind: "PERCENTAGE", value: bucket.percentage },
+          priority: 100 + i,
+        });
+      }
+      router.push("/dashboard");
+    } catch (err) {
+      setSaveError(err instanceof Error ? err.message : "Could not save ledgers.");
+    } finally {
+      setSaving(false);
+    }
   }
 
   const steps = [
@@ -139,6 +167,12 @@ export default function OnboardingPage() {
       )}
       {currentStep === 2 && <StepConfirm buckets={buckets} />}
 
+      {saveError && (
+        <p className="mt-4 rounded-md border border-danger/20 bg-danger-subtle px-4 py-3 text-small text-danger">
+          {saveError}
+        </p>
+      )}
+
       <div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row sm:justify-between">
         <Button
           variant="secondary"
@@ -155,8 +189,19 @@ export default function OnboardingPage() {
             Next
           </Button>
         ) : (
-          <Button asChild className="w-full sm:w-auto">
-            <Link href="/dashboard">Finish setup</Link>
+          <Button
+            onClick={() => void finishSetup()}
+            disabled={saving || buckets.length === 0}
+            className="w-full sm:w-auto"
+          >
+            {saving ? (
+              <>
+                <Loader2 className="h-4 w-4 animate-spin" />
+                Saving ledgers…
+              </>
+            ) : (
+              "Finish setup"
+            )}
           </Button>
         )}
       </div>

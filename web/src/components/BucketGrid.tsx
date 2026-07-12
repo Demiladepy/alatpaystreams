@@ -1,24 +1,23 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Plus } from "lucide-react";
 import type { BucketWithActivity } from "@/types";
+import { AddLedgerDialog } from "./AddLedgerDialog";
 import { BucketCard } from "./BucketCard";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from "./ui/dialog";
 
 interface BucketGridProps {
   buckets: BucketWithActivity[];
+  merchantId: string;
   isLoading?: boolean;
 }
 
-export function BucketGrid({ buckets, isLoading }: BucketGridProps) {
+export function BucketGrid({ buckets, merchantId, isLoading }: BucketGridProps) {
   const [addOpen, setAddOpen] = useState(false);
+  const nextPriority = useMemo(
+    () => buckets.reduce((max, b) => Math.max(max, b.priority), 0) + 1,
+    [buckets],
+  );
 
   if (isLoading) {
     return (
@@ -58,16 +57,12 @@ export function BucketGrid({ buckets, isLoading }: BucketGridProps) {
         </button>
       </div>
 
-      <Dialog open={addOpen} onOpenChange={setAddOpen}>
-        <DialogContent className="rounded-md border-border">
-          <DialogHeader>
-            <DialogTitle>Add a ledger</DialogTitle>
-            <DialogDescription>
-              Ledger creation will be available after onboarding.
-            </DialogDescription>
-          </DialogHeader>
-        </DialogContent>
-      </Dialog>
+      <AddLedgerDialog
+        open={addOpen}
+        onOpenChange={setAddOpen}
+        merchantId={merchantId}
+        nextPriority={nextPriority}
+      />
     </>
   );
 }

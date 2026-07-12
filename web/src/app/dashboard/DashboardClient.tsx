@@ -63,7 +63,11 @@ export default function DashboardClient() {
             View activity
           </Link>
         </div>
-        <BucketGrid buckets={buckets ?? []} isLoading={isLoading} />
+        <BucketGrid
+          buckets={buckets ?? []}
+          merchantId={MERCHANT_ID}
+          isLoading={isLoading}
+        />
       </section>
 
       <UptimePredictor />

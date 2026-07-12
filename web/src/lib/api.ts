@@ -3,6 +3,8 @@
 import useSWR, { mutate } from "swr";
 import type {
   Bucket,
+  BucketRule,
+  BucketType,
   BucketWithActivity,
   Merchant,
   SimulateResponse,
@@ -216,3 +218,44 @@ export async function simulateTransaction(
 
 export const MERCHANT_ID =
   process.env.NEXT_PUBLIC_MERCHANT_ID ?? MOCK_MERCHANT_ID;
+
+export interface CreateBucketInput {
+  merchantId: string;
+  name: string;
+  type: BucketType;
+  rule: BucketRule;
+  priority: number;
+  isActive?: boolean;
+}
+
+function parseApiError(body: string): string {
+  try {
+    const parsed = JSON.parse(body) as { error?: { message?: string } | string };
+    if (typeof parsed.error === "string") return parsed.error;
+    if (parsed.error?.message) return parsed.error.message;
+  } catch {
+    // fall through
+  }
+  return body || "Request failed";
+}
+
+export async function createBucket(input: CreateBucketInput): Promise<Bucket> {
+  if (!getApiBaseUrl()) {
+    throw new Error("Set NEXT_PUBLIC_API_URL to create ledgers.");
+  }
+
+  try {
+    const bucket = await apiFetch<Bucket>("/api/buckets", {
+      method: "POST",
+      body: JSON.stringify(input),
+    });
+    mockMode = false;
+    await mutate(["buckets", input.merchantId]);
+    return bucket;
+  } catch (err) {
+    if (err instanceof Error) {
+      throw new Error(parseApiError(err.message));
+    }
+    throw err;
+  }
+}
