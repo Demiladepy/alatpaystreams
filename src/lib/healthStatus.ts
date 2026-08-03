@@ -12,12 +12,24 @@ function gitSha(): string {
   }
 }
 
+/** Reject after `ms` so a hung dependency can't stall the whole health check.
+ *  A deleted/unreachable Postgres makes Prisma connections hang indefinitely —
+ *  without this cap, /health never responds and the API looks fully dead. */
+function withTimeout<T>(promise: Promise<T>, ms: number, label: string): Promise<T> {
+  return Promise.race([
+    promise,
+    new Promise<T>((_, reject) =>
+      setTimeout(() => reject(new Error(`${label} timed out after ${ms}ms`)), ms),
+    ),
+  ]);
+}
+
 export async function buildHealthStatus() {
   const alatpayHealth = getALATPayHealth();
 
   let postgres: 'connected' | 'disconnected' = 'disconnected';
   try {
-    await prisma.$queryRaw`SELECT 1`;
+    await withTimeout(prisma.$queryRaw`SELECT 1`, 5000, 'postgres');
     postgres = 'connected';
   } catch {
     postgres = 'disconnected';
@@ -25,7 +37,7 @@ export async function buildHealthStatus() {
 
   let redisStatus: 'connected' | 'disconnected' = 'disconnected';
   try {
-    const pong = await redis.ping();
+    const pong = await withTimeout(redis.ping(), 5000, 'redis');
     redisStatus = pong === 'PONG' ? 'connected' : 'disconnected';
   } catch {
     redisStatus = 'disconnected';

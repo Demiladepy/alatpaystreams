@@ -2,6 +2,11 @@ import { PrismaClient, BucketType } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
+// Pinned so a rebuilt database keeps the same merchant id the deployed
+// frontend (Vercel NEXT_PUBLIC_MERCHANT_ID) and co-pilot context reference.
+// Overridable via DEMO_MERCHANT_ID for a clean-room seed.
+const DEMO_MERCHANT_ID = process.env.DEMO_MERCHANT_ID ?? 'cmqocoktt0000u8tw0djqx49c';
+
 async function main() {
   const merchant = await prisma.merchant.upsert({
     where: { phone: '+2348012345678' },
@@ -10,6 +15,7 @@ async function main() {
       name: 'Funke Adebayo Beauty Ltd',
     },
     create: {
+      id: DEMO_MERCHANT_ID,
       name: 'Funke Adebayo Beauty Ltd',
       phone: '+2348012345678',
       email: 'funke@adebayokitchen.ng',
