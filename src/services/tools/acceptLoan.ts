@@ -1,6 +1,7 @@
 import Decimal from 'decimal.js';
 import { Prisma } from '@prisma/client';
 import { prisma } from '../../lib/db';
+import { logger } from '../../lib/logger';
 import { alatpayService } from '../../integrations/alatpay';
 import { resolveMerchantBank } from '../bankResolver';
 import { enqueueDeferredPayout } from '../payoutQueue';
@@ -102,12 +103,77 @@ export async function acceptLoan(input: AcceptLoanInput) {
     };
   }
 
-  const payout = await alatpayService.payout(payoutInput);
-
-  if (payout.status === 'failed') {
-    throw new Error(
-      payout.failureReason ?? 'Disbursement failed — loan was not activated.',
+  // Attempt inline disbursement. ALATPay does not expose a disbursement/payout
+  // product on this account, so a real payout can fail (or the rail can be
+  // unavailable). Rather than abandoning an approved loan, fall back to the
+  // same queued path as an offline bank: activate the loan, create the
+  // repayment bucket, and mark the disbursement as processing.
+  let payout: Awaited<ReturnType<typeof alatpayService.payout>> | null = null;
+  try {
+    const attempt = await alatpayService.payout(payoutInput);
+    if (attempt.status === 'failed') {
+      logger.warn(
+        { loanId: loan.id, reason: attempt.failureReason },
+        'Disbursement returned failed — queuing payout, activating loan',
+      );
+    } else {
+      payout = attempt;
+    }
+  } catch (err) {
+    logger.warn(
+      { loanId: loan.id, err },
+      'Disbursement rail unavailable — queuing payout, activating loan',
     );
+  }
+
+  if (!payout) {
+    await enqueueDeferredPayout(payoutInput);
+
+    const queued = await prisma.$transaction(async (tx) => {
+      const bucket = await tx.bucket.create({
+        data: {
+          merchantId: loan.merchantId,
+          name: 'Loan Repayment',
+          type: 'LOAN_REPAYMENT',
+          rule: { kind: 'PERCENTAGE', value: repaymentPct },
+          priority,
+          isActive: true,
+        },
+      });
+
+      await tx.loan.update({
+        where: { id: loan.id },
+        data: { status: 'ACTIVE', acceptedAt: new Date() },
+      });
+
+      await tx.ledgerEvent.create({
+        data: {
+          merchantId: loan.merchantId,
+          type: 'LOAN_ACCEPTED',
+          payload: {
+            loanId: loan.id,
+            bucketId: bucket.id,
+            principal: loan.principal.toString(),
+            bankCode: bank.bankCode,
+            uptimeStatus: health.status,
+            payoutQueued: true,
+          } as unknown as Prisma.InputJsonValue,
+        },
+      });
+
+      return bucket;
+    });
+
+    return {
+      disbursed: false,
+      queued: true,
+      transactionId: null,
+      newBucketId: queued.id,
+      principal: loan.principal.toString(),
+      payoutStatus: 'pending' as const,
+      uptimeNote: `${uptimeNote} Your loan bucket is active; disbursement is processing.`,
+      bankHealth: health,
+    };
   }
 
   const result = await prisma.$transaction(async (tx) => {

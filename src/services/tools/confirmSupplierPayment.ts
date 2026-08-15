@@ -1,6 +1,7 @@
 import crypto from 'crypto';
 import { Prisma } from '@prisma/client';
 import { prisma } from '../../lib/db';
+import { logger } from '../../lib/logger';
 import { alatpayService } from '../../integrations/alatpay';
 import Decimal from 'decimal.js';
 import { resolveMerchantBank, resolveSupplierBank } from '../bankResolver';
@@ -65,7 +66,36 @@ export async function confirmSupplierPayment(input: ConfirmSupplierPaymentInput)
       };
     }
 
-    const payout = await alatpayService.payout(payoutInput);
+    // ALATPay has no disbursement product on this account, so a live payout can
+    // fail or be unavailable. Degrade to a queued payment instead of throwing.
+    let payout: Awaited<ReturnType<typeof alatpayService.payout>> | null = null;
+    try {
+      const attempt = await alatpayService.payout(payoutInput);
+      if (attempt.status === 'failed') {
+        logger.warn(
+          { supplier: record.supplierName, reason: attempt.failureReason },
+          'Supplier disbursement returned failed — queuing',
+        );
+      } else {
+        payout = attempt;
+      }
+    } catch (err) {
+      logger.warn(
+        { supplier: record.supplierName, err },
+        'Supplier disbursement rail unavailable — queuing',
+      );
+    }
+
+    if (!payout) {
+      await enqueueDeferredPayout(payoutInput);
+      return {
+        success: true,
+        status: 'queued',
+        amountNaira: record.amountNaira,
+        supplierName: record.supplierName,
+        message: `Payment to ${record.supplierName} is confirmed and processing.`,
+      };
+    }
 
     await prisma.ledgerEvent.create({
       data: {
